@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:core="http://www.opengis.net/citygml/3.0"
+    xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
+    xmlns:farm="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
+    targetNamespace="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
+    elementFormDefault="qualified">
+
+    <xs:annotation><xs:appinfo>Package: farm-production</xs:appinfo></xs:annotation>
+
+    <xs:element name="_AbstractCropArea" type="farm:AbstractCropAreaType" abstract="true" substitutionGroup="veg:PlantCover">
+        <xs:annotation><xs:documentation>Abstract feature for crop areas.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbstractCropAreaType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="veg:PlantCoverType">
+                <xs:sequence>
+                    <xs:element name="cropName" type="xs:string"/>
+                    <xs:element name="cropCode" type="gml:CodeType" minOccurs="0">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agrovoc:crop</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="plantingDate" type="xs:date" minOccurs="0"/>
+                    <xs:element name="cultivationSystem" type="xs:string" minOccurs="0"/>
+                    <xs:element name="producerType" type="farm:ProducerTypeValue" minOccurs="0"/> <xs:element name="contourPlanting" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="isIrrigated" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="irrigationSystemType" type="xs:string" minOccurs="0"/>
+                    <xs:element name="seedVarietyType" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="isGMO" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="expectedHarvestsPerCycle" type="xs:positiveInteger" minOccurs="0"/>
+                    <xs:element name="hasProductionContract" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="hasMarketingContract" type="xs:boolean" minOccurs="0"/>
+
+                    <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+                    <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+
+                     <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+
+                    <xs:element name="producesLot" type="farm:HarvestedLotPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+
+                    <xs:element ref="farm:_GenericApplicationPropertyOfAbstractCropArea" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="AnnualCropArea" type="farm:AnnualCropAreaType" substitutionGroup="farm:_AbstractCropArea"/>
+    <xs:complexType name="AnnualCropAreaType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractCropAreaType">
+                <xs:sequence>
+                    <xs:element name="cropRotationInfo" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="PerennialCropArea" type="farm:PerennialCropAreaType" substitutionGroup="farm:_AbstractCropArea"/>
+    <xs:complexType name="PerennialCropAreaType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractCropAreaType">
+                <xs:sequence>
+                    <xs:element name="lastPruningDate" type="xs:date" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="HarvestedLot" type="farm:HarvestedLotType" substitutionGroup="core:AbstractFeature">
+         <xs:annotation><xs:documentation>Feature representing a harvested quantity of produce.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="HarvestedLotType">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="quantityHarvested" type="gml:MeasureType"/>
+                    <xs:element name="harvestDate" type="xs:date"/>
+                    <xs:element name="qualityGrade" type="xs:string" minOccurs="0"/>
+                    <xs:element name="quantitySold" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="averageSalePrice" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="totalSaleValue" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="quantityForOwnUse" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="quantityStored" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+                    <xs:element ref="farm:_GenericApplicationPropertyOfHarvestedLot" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="InputUsedType">
+        <xs:sequence>
+            <xs:element name="inputType" type="gml:CodeType"/>
+            <xs:element name="productName" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantityApplied" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="applicationRate" type="gml:MeasureType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="StorageInfoType">
+        <xs:sequence>
+            <xs:element name="hasStorageAbility" type="xs:boolean"/>
+            <xs:element name="storageType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="isOnFarmStorage" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="isModernFacility" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HarvestedLotPropertyType">
+        <xs:sequence minOccurs="0">
+             <xs:element ref="farm:HarvestedLot"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </xs:complexType>
+
+</xs:schema>
