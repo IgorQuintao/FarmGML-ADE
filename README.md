@@ -33,7 +33,7 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 ---
 
 ## 🗂️ Repository Structure
-
+```bash
 FarmGML-ADE/
 │
 ├── model/                  # UML/XMI source (conceptual model)
@@ -75,6 +75,7 @@ FarmGML-ADE/
 ├── submission-manifest.yaml
 ├── contact.json
 └── ogc-registration.yaml
+```
 ---
 
 ## ⚙️ Model-Driven Architecture (MDA) Workflow
@@ -89,6 +90,7 @@ All schemas and documentation are generated from the UML conceptual model.
 4. Run ShapeChange to generate XSD modules under `schemas/1.3/`.
 5. Validate using the included `validate-xsd.sh` script.
 6. Test instances (`example_ruralproperty.gml`) with **3DCityDB**, **CesiumJS**, and **QGIS**.
+
 ---
 
 ## 🧪 Validation and Use Cases
@@ -96,6 +98,7 @@ All schemas and documentation are generated from the UML conceptual model.
 FarmGML will be validate!
 
 ---
+
 ## 📚 References
 	•	OGC CityGML 3.0 Specification (OGC 20-010)
 	•	OGC Best Practice for ADE Development (Brink et al., 2013)
