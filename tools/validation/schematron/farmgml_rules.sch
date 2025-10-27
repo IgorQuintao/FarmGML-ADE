@@ -2,7 +2,7 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
   <title>Regras Semânticas da FarmGML ADE v1.3</title>
 
-  <ns prefix="farm" uri="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"/>
+  <ns prefix="farm" uri="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"/>
   <ns prefix="core" uri="http://www.opengis.net/citygml/3.0"/>
 
   <pattern>
