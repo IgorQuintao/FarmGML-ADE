@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_FeedingPractice">
+    <gml:description>CodeList for livestock feeding practices.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">feedingpractice</gml:identifier>
+    <gml:name>FarmGML FeedingPractice</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="feed_pasture">
+            <gml:description>Pasture-fed (Alimentado a Pasto)</gml:description>
+            <gml:name>pasture</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="feed_confined">
+            <gml:description>Confined / Feedlot (Confinado)</gml:description>
+            <gml:name>confined</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="feed_semiConfined">
+            <gml:description>Semi-Confined (Semi-Confinado)</gml:description>
+            <gml:name>semiConfined</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
