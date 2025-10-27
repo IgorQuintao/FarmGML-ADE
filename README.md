@@ -95,9 +95,7 @@ All schemas and documentation are generated from the UML conceptual model.
 
 ---
 
-## 🧪 Validation and Use Cases
-
-## 🧪 Validation and Use Cases
+## Validation and Use Cases
 
 To validate the FarmGML ADE:
 
