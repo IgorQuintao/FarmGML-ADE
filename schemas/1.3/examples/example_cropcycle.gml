@@ -31,15 +31,15 @@
           <farm:expectedHarvestsPerCycle>1</farm:expectedHarvestsPerCycle>
 
           <farm:lod0Geometry>
-            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4674">
+            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::43264">
               <gml:exterior>
                 <gml:LinearRing>
                   <gml:posList>
-                    -47.950 -16.000 0
-                    -47.940 -16.000 0
-                    -47.940 -15.990 0
-                    -47.950 -15.990 0
-                    -47.950 -16.000 0
+                    2508935 4819799 0
+                    2509935 4819799 0
+                    2509935 4820799 0
+                    2508935 4820799 0
+                    2508935 4819799 0
                   </gml:posList>
                 </gml:LinearRing>
               </gml:exterior>
@@ -82,15 +82,15 @@
           <farm:expectedHarvestsPerCycle>1</farm:expectedHarvestsPerCycle>
 
           <farm:lod0Geometry>
-            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4674">
+            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326">
               <gml:exterior>
                 <gml:LinearRing>
                   <gml:posList>
-                    -47.940 -16.000 0
-                    -47.930 -16.000 0
-                    -47.930 -15.990 0
-                    -47.940 -15.990 0
-                    -47.940 -16.000 0
+                    2508935 4819799 0
+                    2509935 4819799 0
+                    2509935 4820799 0
+                    2508935 4820799 0
+                    2508935 4819799 0
                   </gml:posList>
                 </gml:LinearRing>
               </gml:exterior>

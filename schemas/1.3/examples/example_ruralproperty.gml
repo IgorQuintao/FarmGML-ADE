@@ -45,22 +45,22 @@
           <farm:expectedHarvestsPerCycle>1</farm:expectedHarvestsPerCycle>
 
           <gml:boundedBy>
-            <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4674">
+            <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
               <gml:lowerCorner>-43.950 -19.980</gml:lowerCorner>
               <gml:upperCorner>-43.940 -19.970</gml:upperCorner>
             </gml:Envelope>
           </gml:boundedBy>
           
           <farm:lod0Geometry>
-            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4674">
+            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::31983">
               <gml:exterior>
                 <gml:LinearRing>
                   <gml:posList>
-                    -43.950 -19.980 0
-                    -43.940 -19.980 0
-                    -43.940 -19.970 0
-                    -43.950 -19.970 0
-                    -43.950 -19.980 0
+                    2508935 4819799 0
+                    2509935 4819799 0
+                    2509935 4820799 0
+                    2508935 4820799 0
+                    2508935 4819799 0
                   </gml:posList>
                 </gml:LinearRing>
               </gml:exterior>
