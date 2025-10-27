@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_RelationshipToHead">
+    <gml:description>CodeList for relationship to household head.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">relationship</gml:identifier>
+    <gml:name>FarmGML RelationshipToHead</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="rel_head">
+            <gml:description>Head (Chefe / Referência)</gml:description>
+            <gml:name>head</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="rel_spouse">
+            <gml:description>Spouse (Cônjuge / Companheiro(a))</gml:description>
+            <gml:name>spouse</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="rel_child">
+            <gml:description>Child (Filho(a))</gml:description>
+            <gml:name>child</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="rel_parent">
+            <gml:description>Parent (Pai / Mãe)</gml:description>
+            <gml:name>parent</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="rel_otherRelative">
+            <gml:description>Other Relative (Outro Parente)</gml:description>
+            <gml:name>otherRelative</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
