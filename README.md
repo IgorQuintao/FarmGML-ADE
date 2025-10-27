@@ -26,7 +26,8 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 | **ADE Name** | FarmGML |
 | **Version** | 1.3 |
 | **Target Standard** | OGC CityGML 3.0 |
-| **Namespace URI** | `./schemas/ade/farmgml/1.3` |
+| **Namespace URI** | `https://igorquintao.github.io/FarmGML-ADE/schemas/1.3` |
+| **Schema Location** | `https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd` |
 | **Prefix** | `farm` |
 | **Last Updated** | 2025-10-25 |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
@@ -96,7 +97,29 @@ All schemas and documentation are generated from the UML conceptual model.
 
 ## 🧪 Validation and Use Cases
 
-FarmGML will be validate!
+## 🧪 Validation and Use Cases
+
+To validate the FarmGML ADE:
+
+1. **3DCityDB**
+   - Import the CityGML 3.0 core schema and FarmGML ADE modules.
+   - Load `schemas/1.3/examples/example_ruralproperty.gml` using the Importer/Exporter.
+   - Confirm ADE tables are created (e.g., `farm_ruralproperty`, `farm_croparea`).
+   - Visualize using the 3DCityDB Web Map Client or CesiumJS.
+
+2. **CesiumJS**
+   - Convert the database instance to 3D Tiles using 3DCityDB Exporter.
+   - Publish tiles on a CesiumJS viewer.
+   - Use the attributes from FarmGML (e.g., crop type, sustainability index) for pop-ups or layer styling.
+
+3. **QGIS**
+   - Load the GML directly via *Layer → Add Layer → Add Vector Layer…*
+   - Ensure the CityGML 3.0 + ADE plugin is active.
+   - Inspect feature attributes and geometry consistency.
+
+Validation success criteria:
+- All features are parsed without schema errors.
+- The ADE-specific attributes (farm:) are recognized in each environment.
 
 ---
 
@@ -124,3 +147,13 @@ FarmGML will be validate!
 
 ## © 2025 FarmGML ADE Project — Licensed under CC BY 4.0
 Developed using Model-Driven Architecture principles (UML → ShapeChange → XSD)
+
+---
+### 🏛️ Namespace Ownership
+
+The official namespace URI for this ADE is:
+
+**`https://igorquintao.github.io/FarmGML-ADE/schemas/1.3`**
+
+It is maintained by **Eng. Igor Quintão** under GitHub Pages hosting.  
+This URI resolves to the authoritative location of the FarmGML ADE schemas and documentation.
