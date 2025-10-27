@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_CropGrowthStage">
+<gml:Dictionary 
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    gml:id="CropGrowthStage"
+    gml:identifier="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/cropgrowthstage.xml">
+
     <gml:description>CodeList for crop growth stages (based on simplified BBCH scale).</gml:description>
-    <gml:identifier codeSpace="urn:farm:codelist:">cropgrowthstage</gml:identifier>
-    <gml:name>FarmGML CropGrowthStage</gml:name>
+    <gml:name>CropGrowthStage</gml:name>
     <gml:dictionaryEntry>
         <gml:Definition gml:id="stage_germination">
-            <gml:description>Germination / Emergence (Germinação / Emergência)</gml:description>
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage">stage_germination</gml:identifier>
             <gml:name>germination</gml:name>
+            <gml:description>Germination / Emergence (Germinação / Emergência).</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
         <gml:Definition gml:id="stage_leafDev">
-            <gml:description>Leaf Development (Desenvolvimento Foliar)</gml:description>
-            <gml:name>leafDevelopment</gml:name>
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage">stage_leafDev</gml:identifier>            
+            <gml:name>leafDevelopment</gml:name>           
+            <gml:description>Leaf Development (Desenvolvimento Foliar - Vegetativo).</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
         <gml:Definition gml:id="stage_flowering">
-            <gml:description>Flowering (Florescimento)</gml:description>
-            <gml:name>flowering</gml:name>
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage">stage_flowering</gml:identifier>                
+            <gml:name>flowering</gml:name>            
+            <gml:description>Flowering (Florescimento - Reprodutivo)</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
         <gml:Definition gml:id="stage_ripening">
-            <gml:description>Fruit Development / Ripening (Desenvolvimento do Fruto / Maturação)</gml:description>
-            <gml:name>ripening</gml:name>
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage">stage_ripening</gml:identifier>                
+            <gml:name>ripening</gml:name>           
+            <gml:description>Fruit Development / Ripening (Desenvolvimento do Fruto / Maturação).</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
         <gml:Definition gml:id="stage_senescence">
-            <gml:description>Senescence / Harvest-ready (Senescência / Ponto de Colheita)</gml:description>
-            <gml:name>senescence</gml:name>
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage">stage_senescence</gml:identifier>                
+            <gml:name>senescence</gml:name>           
+            <gml:description>Senescence / Harvest-ready (Senescência / Ponto de Colheita).</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
 </gml:Dictionary>

@@ -7,8 +7,8 @@
     xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
     xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
     xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
-    xmlns:farm="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
-    targetNamespace="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
+    xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
+    targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
     <xs:annotation>
@@ -20,10 +20,14 @@
         </xs:documentation>
         <xs:documentation xml:lang="pt-br">
             Extensão de Domínio de Aplicação (ADE) FarmGML para CityGML 3.0
-            Versão: 1.3 (Refatorada com base na análise crítica)
+            Versão: 1.3 
             Data: 2025-10-25
             Descrição: Estende CityGML 3.0 para a cadeia de valor agroalimentar. Incorpora a Tipologia de Fazendas da FAO (via AGRIS), escopo farm-to-fork AgrIMAF, avaliação de risco ZARC NM e insights da Estratégia Agrodigital Brasileira. Esta versão refatora a estrutura em pacotes, melhora a conformidade com CityGML (Hooks, Genéricos), clarifica a semântica (termos em inglês, CodeLists externas), adiciona geometria explícita e elementos temporais (TimeSlice, Lifecycle).
         </xs:documentation>
+        <xs:appinfo source="urn:ogc:def:appinfo:external-codelist">
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType.xml
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage.xml
+        </xs:appinfo>
     </xs:annotation>
 
     <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/cityGMLBase.xsd"/>
