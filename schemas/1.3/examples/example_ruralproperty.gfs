@@ -6,13 +6,13 @@
     <GeometryElementPath>cropArea|AnnualCropArea|lod0Geometry</GeometryElementPath>
     <!--POLYGONZ-->
     <GeometryType>-2147483645</GeometryType>
-    <SRSName>urn:ogc:def:crs:EPSG::4674</SRSName>
+    <SRSName>urn:ogc:def:crs:EPSG::31983</SRSName>
     <DatasetSpecificInfo>
       <FeatureCount>1</FeatureCount>
-      <ExtentXMin>-19.98000</ExtentXMin>
-      <ExtentXMax>-19.97000</ExtentXMax>
-      <ExtentYMin>-43.95000</ExtentYMin>
-      <ExtentYMax>-43.94000</ExtentYMax>
+      <ExtentXMin>721128.11649</ExtentXMin>
+      <ExtentXMax>722128.11649</ExtentXMax>
+      <ExtentYMin>7701296.04992</ExtentYMin>
+      <ExtentYMax>7702296.04992</ExtentYMax>
     </DatasetSpecificInfo>
     <PropertyDefn>
       <Name>name</Name>
