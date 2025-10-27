@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_Sex">
+    <gml:description>CodeList for sex of a person.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">sex</gml:identifier>
+    <gml:name>FarmGML Sex</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="sex_male">
+            <gml:description>Male (Masculino)</gml:description>
+            <gml:name>male</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="sex_female">
+            <gml:description>Female (Feminino)</gml:description>
+            <gml:name>female</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="sex_other">
+            <gml:description>Other (Outro)</gml:description>
+            <gml:name>other</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
