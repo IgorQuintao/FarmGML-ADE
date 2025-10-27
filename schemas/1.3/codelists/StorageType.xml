@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_StorageType">
+    <gml:description>CodeList for on-farm storage types.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">storagetype</gml:identifier>
+    <gml:name>FarmGML StorageType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="store_silo">
+            <gml:description>Silo (Silo)</gml:description>
+            <gml:name>silo</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="store_warehouse">
+            <gml:description>Warehouse / Barn (Armazém / Galpão)</gml:description>
+            <gml:name>warehouse</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="store_cold">
+            <gml:description>Cold Storage (Câmara Fria)</gml:description>
+            <gml:name>coldStorage</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
