@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder for UML XMI Model Export -->
+<XMI xmi.version="2.1"
+     xmlns:UML="http://schema.omg.org/spec/UML/2.1"
+     xmlns:xmi="http://www.omg.org/spec/XMI/2.1">
+  <UML:Model name="FarmGML ADE Conceptual Model v1.3"
+             xmi:id="FarmGML_Model_1_3">
+    <UML:Package name="farm-core"/>
+    <UML:Package name="farm-enterprise"/>
+    <UML:Package name="farm-hooks"/>
+    <UML:Package name="farm-production"/>
+    <UML:Package name="farm-operations"/>
+    <UML:Package name="farm-risk"/>
+    <UML:Package name="farm-sustainability"/>
+    <UML:Package name="farm-temporal"/>
+  </UML:Model>
+</XMI>
