@@ -25,7 +25,7 @@ Minor versions (e.g., 1.3 → 1.3.1) cover technical corrections or schema refin
 **Resolution Policy:**  
 The namespace URI resolves to a human-readable documentation page and the schema file (`FarmGML.xsd`) hosted on GitHub Pages.
 
-**Namespace Ownership Statement**
+**Namespace Ownership Statement:**
 The namespace URI https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 is permanently maintained by Eng. Igor Quintão via GitHub Pages.
 This URI resolves to the authoritative location of the FarmGML ADE schemas and related documentation.
 
