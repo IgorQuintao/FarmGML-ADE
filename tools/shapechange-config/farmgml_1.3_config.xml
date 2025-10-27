@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns="http://shapechange.net/config">
+  <target name="FarmGML_ADE_1_3"
+          language="XMLSCHEMA"
+          xmlns:app="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
+          xmlns:gml="http://www.opengis.net/gml/3.2"
+          xmlns:core="http://www.opengis.net/citygml/3.0"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+    <source>
+      <modelFile>../../model/1.3/FarmGML_v1.3.xmi</modelFile>
+    </source>
+    <outputDirectory>../../schemas/1.3/</outputDirectory>
+    <parameters>
+      <parameter name="targetNamespace" value="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"/>
+      <parameter name="modularize" value="true"/>
+      <parameter name="encodingRules" value="iso19136_2007"/>
+      <parameter name="createDocumentation" value="true"/>
+      <parameter name="includeGmlProfile" value="true"/>
+    </parameters>
+  </target>
+</ShapeChangeConfiguration>
