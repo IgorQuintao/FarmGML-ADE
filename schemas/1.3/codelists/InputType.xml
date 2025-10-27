@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_InputType">
+    <gml:description>CodeList for agricultural input types.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">inputtype</gml:identifier>
+    <gml:name>FarmGML InputType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="input_fertilizer">
+            <gml:description>Fertilizer (Fertilizante)</gml:description>
+            <gml:name>fertilizer</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="input_pesticide">
+            <gml:description>Pesticide / Agrochemical (Defensivo / Agrotóxico)</gml:description>
+            <gml:name>pesticide</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="input_bio">
+            <gml:description>Bio-input (Bioinsumo)</gml:description>
+            <gml:name>bioinput</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="input_water">
+            <gml:description>Water (Água - irrigação)</gml:description>
+            <gml:name>water</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="input_seed">
+            <gml:description>Seed (Semente)</gml:description>
+            <gml:name>seed</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
