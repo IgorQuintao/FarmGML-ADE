@@ -10,73 +10,69 @@ submission:
   identifier: urn:ogc:def:ade:citygml:farmgml:1.3
   title: FarmGML ADE - Agricultural Domain Extension for CityGML 3.0
   version: 1.3
-  status: Draft for OGC Community Standard submission
-  submissionDate: 2025-10-26
-  license: CC-BY-4.0
-  language: en
-  organization: UNIVERSIDADE FEDERAL DE VIÇOSA (UFV)
-  maintainer: Eng. Igor Quintão
+  date: 2025-10-26
+  status: Draft for OGC Submission
   contact:
+    name: Eng. Igor Quintão
+    organization: Universidade Federal de Viçosa (UFV)
     email: igor.quintao@ufv.br
-    github: https://github.com/IgorQuintao/FarmGML-ADE
     web: https://igorquintao.github.io/FarmGML-ADE/
+  description: >
+    FarmGML ADE extends CityGML 3.0 for the agricultural domain, representing rural
+    properties, crop areas, enterprises, operations, risk assessments and sustainability
+    metrics. It follows the Model-Driven Architecture (UML-to-XSD) approach and is fully
+    compliant with OGC ADE design patterns (Hooks, GenericApplicationProperty).
 
-artifacts:
-  schemas:
-    - title: "FarmGML ADE Schema v1.3"
-      metadata: "schemas/1.3/metadata/farmgml-metadata.yaml"
-      schemaLocation: "https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/FarmGML.xsd"
-      checksum:
-        algorithm: MD5
-        value: "to-be-updated-after-publication"
+  license: CC-BY-4.0
+  namespace:
+    prefix: farm
+    uri: https://igorquintao.github.io/FarmGML-ADE/schemas/1.3
+    schemaLocation: https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd
+
+  artifacts:
+    - path: schemas/1.3/FarmGML.xsd
+      role: root-schema
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-hooks.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-core.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-enterprise.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-production.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-operations.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-risk.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-sustainability.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+    - path: schemas/1.3/farm-temporal.xsd
+      role: module
+      md5: <INSERIR_MD5_DO_ARQUIVO>
+
+  dependencies:
+    - http://schemas.opengis.net/citygml/3.0/cityGMLBase.xsd
+    - http://schemas.opengis.net/citygml/3.0/landUse.xsd
+    - http://schemas.opengis.net/citygml/3.0/building.xsd
+    - http://schemas.opengis.net/citygml/3.0/vegetation.xsd
+
   documentation:
-    - "docs/specification/FarmGML_Conceptual_Model.pdf"
-    - "docs/specification/FarmGML_Encoding_Specification.pdf"
-    - "docs/specification/FarmGML_UseCases.pdf"
+    - docs/specification/FarmGML_Encoding_Specification.pdf
+    - docs/specification/FarmGML_Conceptual_Model.pdf
+    - docs/specification/FarmGML_UseCases.pdf
+
   examples:
-    - "schemas/1.3/examples/example_ruralproperty.gml"
-  tools:
-    - "tools/shapechange-config/farmgml_1.3_config.xml"
-    - "tools/scripts/validate-xsd.sh"
-    - "tools/scripts/generate-xsd-from-uml.bat"
+    - schemas/1.3/examples/example_ruralproperty.gml
 
-namespace:
-  uri: https://igorquintao.github.io/FarmGML-ADE/schemas/1.3
-  prefix: farm
-  schemaFile: FarmGML.xsd
-  policyDocument: "docs/policies/namespace-policy.md"
-
-repository:
-  type: GitHub
-  url: https://github.com/IgorQuintao/FarmGML-ADE
-  defaultBranch: main
-  webPage: https://igorquintao.github.io/FarmGML-ADE/
-  issueTracker: https://github.com/IgorQuintao/FarmGML-ADE/issues
-
-validation:
-  schema: true
-  schematron: true
-  testInstances: true
-  validationTools:
-    - name: OGC TEAM Engine
-      url: https://cite.opengeospatial.org/teamengine/
-    - name: QGIS
-      version: "3.40 or later"
-    - name: 3DCityDB
-      version: "5.x (CityGML 3.0 compatible)"
-    - name: CesiumJS
-      version: "1.123 or later"
-
-relatedStandards:
-  - CityGML 3.0 (OGC 21-006)
-  - GML 3.2.1 (OGC 07-036)
-  - OGC Modular Specification (OGC 08-131r3)
-  - UML-to-GML Encoding Rules (Brink, 2013)
-  - ISO 19115-3:2016 Metadata
-  - ISO 19109:2015 Rules for Application Schema
-
-notes:
-  - "This submission follows the Model-Driven Architecture (MDA) approach, where UML is the authoritative conceptual model and XSD is derived using ShapeChange."
-  - "The ADE is organized into modular schemas (farm-core, farm-production, farm-enterprise, etc.), imported by the umbrella FarmGML.xsd."
-  - "The namespace URI resolves to the public schema and documentation hosted on GitHub Pages."
-  - "Validation of example datasets has been performed in 3DCityDB, CesiumJS, and QGIS using the FarmGML.xsd v1.3 schema."
+  validation:
+    schema: true
+    schematron: true
+    testInstances: true
