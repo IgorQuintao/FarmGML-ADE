@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_BuildingType">
+<gml:Dictionary 
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    gml:id="BuildingType"
+    gml:identifier="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType.xml">
+    
     <gml:description>
-        CodeList for FarmGML building types.
+        Building types commonly used in agricultural contexts.
         (Lista de Códigos para tipos de construção do FarmGML)
     </gml:description>
-    <gml:identifier codeSpace="urn:farm:codelist:">buildingtype</gml:identifier>
-    <gml:name>FarmGML BuildingType</gml:name>
+    <gml:name>BuildingType</gml:name>
     <gml:dictionaryEntry>
-        <gml:Definition gml:id="bldg_silo">
-            <gml:description>Silo (Armazenagem de grãos)</gml:description>
-            <gml:name>silo</gml:name>
+        <gml:Definition gml:id="silo">
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType">silo</gml:identifier>
+            <gml:name>Silo</gml:name>
+            <gml:description>Structure used for bulk storage of grain or silage.</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
-        <gml:Definition gml:id="bldg_barn">
-            <gml:description>Barn / Storage Shed (Celeiro / Galpão de armazenamento)</gml:description>
-            <gml:name>barn</gml:name>
+        <gml:Definition gml:id="barn">
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType">barn</gml:identifier>
+            <gml:name>Barn</gml:name>
+            <gml:description>Building used for housing livestock and storing fodder.</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     <gml:dictionaryEntry>
-        <gml:Definition gml:id="bldg_stable">
-            <gml:description>Stable / Animal Housing (Estábulo / Alojamento de animais)</gml:description>
-            <gml:name>stable</gml:name>
+        <gml:Definition gml:id="stable">
+            <gml:identifier codeSpace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType">stable</gml:identifier>
+            <gml:name>Stable</gml:name>
+            <gml:description>Building used to house horses or other work animals.</gml:description>
         </gml:Definition>
     </gml:dictionaryEntry>
     </gml:Dictionary>

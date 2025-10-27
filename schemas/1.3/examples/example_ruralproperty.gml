@@ -5,7 +5,11 @@
     xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
     xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
     xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
-    xmlns:farm="http://www.exemplo.gov.br/schemas/ade/farmgml/1.3"
+    xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+      http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/cityGMLBase.xsd
+      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd"
     gml:id="FarmModel_001">
 
   <core:cityObjectMember>
