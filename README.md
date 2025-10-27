@@ -101,11 +101,12 @@ FarmGML will be validate!
 ---
 
 ## 📚 References
-	•	OGC CityGML 3.0 Specification (OGC 20-010)
-	•	OGC Best Practice for ADE Development (Brink et al., 2013)
 	•	3DCityDB ADE Manager
 	•	CesiumJS (https://cesium.com/platform/cesiumjs)
-	•	QGIS CityGML Plugin
+	•	Van den Brink, L., Stoter, J., Zlatanova, S. (2013) – UML-Based Approach to Developing a CityGML Application Domain Extension. Transactions in GIS, 17(6): 920–942.
+	•	OGC (2021) – CityGML 3.0 Conceptual Model Standard (OGC 20-010).
+	•	ISO 19136 – Geography Markup Language (GML).
+	•	ShapeChange Tool – UML-to-GML encoder implementing ISO encoding rules.
 ---
 ## 👤 Contact
 
