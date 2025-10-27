@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_ForestryProductType">
+    <gml:description>CodeList for forestry enterprise product types.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">forestryproduct</gml:identifier>
+    <gml:name>FarmGML ForestryProductType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="forest_timber">
+            <gml:description>Timber (Madeira para Serraria)</gml:description>
+            <gml:name>timber</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="forest_pulp">
+            <gml:description>Pulp / Cellulose (Celulose)</gml:description>
+            <gml:name>pulp</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="forest_firewood">
+            <gml:description>Firewood / Charcoal (Lenha / Carvão)</gml:description>
+            <gml:name>firewood</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="forest_nonWood">
+            <gml:description>Non-Wood Product (Produto não-madeireiro, ex: resina, castanha)</gml:description>
+            <gml:name>nonWood</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
