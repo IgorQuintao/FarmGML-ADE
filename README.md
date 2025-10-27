@@ -1,6 +1,5 @@
 # FarmGML-ADE 🚜
-## FarmGML ADE v1.3
-**Agricultural Domain Extension (ADE) for CityGML 3.0**
+**Agricultural Domain**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![OGC Standard](https://img.shields.io/badge/OGC-CityGML%203.0-blue.svg)](https://www.ogc.org/standard/citygml/)
@@ -29,7 +28,7 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 | **Namespace URI** | `https://igorquintao.github.io/FarmGML-ADE/schemas/1.3` |
 | **Schema Location** | `https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd` |
 | **Prefix** | `farm` |
-| **Last Updated** | 2025-10-25 |
+| **Last Updated** | 2025-10-27 |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 
 ---
@@ -44,16 +43,36 @@ FarmGML-ADE/
 │       └── diagrams/
 │
 ├── schemas/                # Generated schemas and examples (distribution)
-│   ├── 1.3/
-│   │   ├── FarmGML.xsd
-│   │   ├── farm-core.xsd
-│   │   ├── farm-production.xsd
-│   │   ├── …
-│   │   ├── codelists/
-│   │   ├── examples/
-│   │   │   └── example_ruralproperty.gml
-│   │   └── metadata/
-│   │       └── farmgml-metadata.yaml
+│   └── 1.3/
+│       ├── FarmGML.xsd
+│       ├── farm-core.xsd
+│       ├── farm-production.xsd
+│       ├── farm-operations.xsd
+│       ├── farm-enterprise.xsd
+│       ├── farm-risk.xsd
+│       ├── farm-sustainability.xsd
+│       ├── farm-temporal.xsd
+│       ├── farm-hooks.xsd
+│       ├── codelists/
+│       │   ├── BuildingType.xml
+│       │   ├── CropGrowthStage.xml
+│       │   ├── MainLocationType.xml
+│       │   ├── LandTenureType.xml
+│       │   ├── Sex.xml
+│       │   ├── EducationLevel.xml
+│       │   ├── RelationshipToHead.xml
+│       │   ├── FeedingPractice.xml
+│       │   ├── ForestryProductType.xml
+│       │   ├── SeedVarietyType.xml
+│       │   ├── InputType.xml
+│       │   ├── StorageType.xml
+│       │   └── OperationType.xml
+│       ├── examples/
+│       │   ├── example_ruralproperty.gml
+│       │   ├── example_cropcycle.gml
+│       │   └── example_enterprise.gml
+│       └── metadata/
+│           └── farmgml-metadata.yaml
 │
 ├── tools/                  # Automation and validation tools
 │   ├── shapechange-config/
@@ -62,6 +81,8 @@ FarmGML-ADE/
 │   │   ├── generate-xsd-from-uml.bat
 │   │   └── validate-xsd.sh
 │   └── validation/
+│       └── schematron/
+│           └── farmgml_rules.sch
 │
 ├── docs/                   # Documentation and policies
 │   ├── specification/
@@ -69,14 +90,19 @@ FarmGML-ADE/
 │   │   ├── FarmGML_Encoding_Specification.pdf
 │   │   └── FarmGML_UseCases.pdf
 │   ├── schema-reference/
-│   │   └── 1.3/farmgml.html
+│   │   └── 1.3/
+│   │       └── farmgml_rules.sch
 │   └── policies/
 │       └── namespace-policy.md
 │
-└── .ogc/                   # OGC submission metadata
-├── submission-manifest.yaml
-├── contact.json
-└── ogc-registration.yaml
+├── .ogc/                   # OGC submission metadata
+│   ├── submission-manifest.yaml
+│   ├── contact.json
+│   └── ogc-registration.yaml
+│
+├── CHANGELOG.md
+├── LICENSE.txt
+└── README.md
 ```
 ---
 
@@ -86,7 +112,7 @@ FarmGML adopts a **Model-Driven Architecture** approach.
 All schemas and documentation are generated from the UML conceptual model.
 
 **Workflow summary:**
-1. Model conceptual features in UML (e.g., Enterprise Architect, MagicDraw).
+1. Model conceptual features in UML.
 2. Export UML → XMI (`model/1.3/FarmGML_v1.3.xmi`).
 3. Configure **ShapeChange** using `tools/shapechange-config/farmgml_1.3_config.xml`.
 4. Run ShapeChange to generate XSD modules under `schemas/1.3/`.
