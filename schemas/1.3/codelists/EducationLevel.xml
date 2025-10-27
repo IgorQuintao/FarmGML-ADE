@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_EducationLevel">
+    <gml:description>CodeList for education level.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">educationlevel</gml:identifier>
+    <gml:name>FarmGML EducationLevel</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="edu_none">
+            <gml:description>None (Nenhuma)</gml:description>
+            <gml:name>none</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="edu_primary">
+            <gml:description>Primary (Ensino Fundamental)</gml:description>
+            <gml:name>primary</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="edu_secondary">
+            <gml:description>Secondary (Ensino Médio)</gml:description>
+            <gml:name>secondary</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="edu_technical">
+            <gml:description>Technical (Ensino Técnico)</gml:description>
+            <gml:name>technical</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="edu_tertiary">
+            <gml:description>Tertiary / Higher (Ensino Superior)</gml:description>
+            <gml:name>tertiary</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
