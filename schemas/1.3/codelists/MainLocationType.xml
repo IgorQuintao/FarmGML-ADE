@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_MainLocationType">
+    <gml:description>CodeList for main location type of the holding.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">mainlocationtype</gml:identifier>
+    <gml:name>FarmGML MainLocationType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="loc_rural">
+            <gml:description>Rural Zone (Zona Rural)</gml:description>
+            <gml:name>rural</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="loc_urban">
+            <gml:description>Urban Zone (Zona Urbana)</gml:description>
+            <gml:name>urban</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
