@@ -29,7 +29,7 @@ keywords:
   - Digital Twin
   - OGC
 namespace:
-  uri: http://www.exemplo.gov.br/schemas/ade/farmgml/1.3
+  uri: https://igorquintao.github.io/FarmGML-ADE/schemas/1.3
   prefix: farm
   schemaLocation: https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farmgml.xsd
 dependencies:
