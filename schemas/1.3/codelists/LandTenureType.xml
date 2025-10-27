@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_LandTenureType">
+    <gml:description>CodeList for land tenure types (based on FAO).</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">landtenuretype</gml:identifier>
+    <gml:name>FarmGML LandTenureType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="tenure_owned">
+            <gml:description>Owned (Própria)</gml:description>
+            <gml:name>owned</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="tenure_rented">
+            <gml:description>Rented (Arrendada)</gml:description>
+            <gml:name>rented</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="tenure_sharecropped">
+            <gml:description>Sharecropped (Parceria)</gml:description>
+            <gml:name>sharecropped</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="tenure_squatted">
+            <gml:description>Squatted / Occupied (Posse / Ocupação)</gml:description>
+            <gml:name>squatted</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
