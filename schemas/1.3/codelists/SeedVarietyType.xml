@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_SeedVarietyType">
+    <gml:description>CodeList for seed variety types.</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">seedtype</gml:identifier>
+    <gml:name>FarmGML SeedVarietyType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="seed_conventional">
+            <gml:description>Conventional (Convencional)</gml:description>
+            <gml:name>conventional</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="seed_gmo">
+            <gml:description>Transgenic / GMO (Transgênica)</gml:description>
+            <gml:name>gmo</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="seed_hybrid">
+            <gml:description>Hybrid (Híbrida)</gml:description>
+            <gml:name>hybrid</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="seed_creole">
+            <gml:description>Creole / Landrace (Crioula)</gml:description>
+            <gml:name>creole</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
