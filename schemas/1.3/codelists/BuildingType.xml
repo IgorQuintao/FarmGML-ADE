@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_BuildingType">
+    <gml:description>
+        CodeList for FarmGML building types.
+        (Lista de Códigos para tipos de construção do FarmGML)
+    </gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">buildingtype</gml:identifier>
+    <gml:name>FarmGML BuildingType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="bldg_silo">
+            <gml:description>Silo (Armazenagem de grãos)</gml:description>
+            <gml:name>silo</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="bldg_barn">
+            <gml:description>Barn / Storage Shed (Celeiro / Galpão de armazenamento)</gml:description>
+            <gml:name>barn</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="bldg_stable">
+            <gml:description>Stable / Animal Housing (Estábulo / Alojamento de animais)</gml:description>
+            <gml:name>stable</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    </gml:Dictionary>
