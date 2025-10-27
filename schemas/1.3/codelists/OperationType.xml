@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_OperationType">
+    <gml:description>
+        CodeList for FarmGML agricultural operation types.
+        (Lista de Códigos para tipos de operação agrícola do FarmGML)
+    </gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">operationtype</gml:identifier>
+    <gml:name>FarmGML OperationType</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="op_planting">
+            <gml:description>Planting or Seeding (Plantio ou Semeadura)</gml:description>
+            <gml:name>planting</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="op_harvesting">
+            <gml:description>Harvesting (Colheita)</gml:description>
+            <gml:name>harvesting</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="op_fertilizing">
+            <gml:description>Fertilizing (Fertilização)</gml:description>
+            <gml:name>fertilizing</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="op_irrigation">
+            <gml:description>Irrigation (Irrigação)</gml:description>
+            <gml:name>irrigation</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    </gml:Dictionary>
