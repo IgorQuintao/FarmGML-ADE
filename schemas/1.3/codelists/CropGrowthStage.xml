@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:Dictionary xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="FarmGML_CropGrowthStage">
+    <gml:description>CodeList for crop growth stages (based on simplified BBCH scale).</gml:description>
+    <gml:identifier codeSpace="urn:farm:codelist:">cropgrowthstage</gml:identifier>
+    <gml:name>FarmGML CropGrowthStage</gml:name>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="stage_germination">
+            <gml:description>Germination / Emergence (Germinação / Emergência)</gml:description>
+            <gml:name>germination</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="stage_leafDev">
+            <gml:description>Leaf Development (Desenvolvimento Foliar)</gml:description>
+            <gml:name>leafDevelopment</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="stage_flowering">
+            <gml:description>Flowering (Florescimento)</gml:description>
+            <gml:name>flowering</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="stage_ripening">
+            <gml:description>Fruit Development / Ripening (Desenvolvimento do Fruto / Maturação)</gml:description>
+            <gml:name>ripening</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+    <gml:dictionaryEntry>
+        <gml:Definition gml:id="stage_senescence">
+            <gml:description>Senescence / Harvest-ready (Senescência / Ponto de Colheita)</gml:description>
+            <gml:name>senescence</gml:name>
+        </gml:Definition>
+    </gml:dictionaryEntry>
+</gml:Dictionary>
