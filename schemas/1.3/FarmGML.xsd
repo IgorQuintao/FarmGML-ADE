@@ -35,13 +35,13 @@
     <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/landUse.xsd"/>
     <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/building.xsd"/>
 
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-hooks.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-core.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-enterprise.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-production.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-operations.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-risk.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-sustainability.xsd"/>
-    <xs:include schemaLocation="https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/farm-temporal.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-hooks.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-core.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-enterprise.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-production.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-operations.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-risk.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-sustainability.xsd"/>
+    <xs:include schemaLocation="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-temporal.xsd"/>
 
 </xs:schema>
