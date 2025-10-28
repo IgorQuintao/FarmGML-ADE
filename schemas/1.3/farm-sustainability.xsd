@@ -7,6 +7,9 @@
     targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
+    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="../ogc/citygml/3.0/cityGMLBase.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../ogc/citygml/3.0/gml.xsd"/>
+
     <xs:annotation><xs:appinfo>Package: farm-sustainability</xs:appinfo></xs:annotation>
 
      <xs:complexType name="SustainabilityMetricsType">
@@ -27,8 +30,5 @@
             <xs:element name="originAreaRef" type="gml:ReferenceType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-
-    <xs:element name="sustainability" type="farm:SustainabilityMetricsType" substitutionGroup="core:_GenericApplicationPropertyOfRuralProperty"/>
-    <xs:element name="traceabilityInfo" type="farm:TraceabilityInfoType" substitutionGroup="farm:_GenericApplicationPropertyOfHarvestedLot"/>
 
 </xs:schema>

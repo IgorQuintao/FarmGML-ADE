@@ -7,6 +7,8 @@
     targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
+    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="../ogc/citygml/3.0/cityGMLBase.xsd"/>
+
     <xs:annotation><xs:appinfo>Package: farm-enterprise</xs:appinfo></xs:annotation>
 
     <xs:element name="_AbstractRuralEnterprise" type="farm:AbstractRuralEnterpriseType" abstract="true" substitutionGroup="core:AbstractFeature">

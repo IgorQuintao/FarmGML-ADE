@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="schema">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="annotation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="documentation" maxOccurs="unbounded" type="xs:string" />
+                            <xs:element name="appinfo">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="source" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="import" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="namespace" use="required" />
+                        <xs:attribute name="schemaLocation" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="include" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="schemaLocation" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="targetNamespace" use="required" />
+            <xs:attribute name="elementFormDefault" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
