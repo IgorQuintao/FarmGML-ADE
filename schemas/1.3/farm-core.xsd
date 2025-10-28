@@ -19,11 +19,164 @@
         <xs:complexContent>
             <xs:extension base="luse:LandUseType">
                 <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0"/>
+                    <xs:element name="holderID" type="xs:string" minOccurs="0" />
+                    <xs:element name="managerInfo" type="farm:PersonInfoType" minOccurs="0" />
+                    <xs:element name="carCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="ibgeCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="officialID" type="xs:string" minOccurs="0" />
+                    <xs:element name="lastCensusID" type="xs:string" minOccurs="0" />
+                    <xs:element name="mainLocationType" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="landTenureType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="keepsRecords" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="mainAgriculturalFocus" type="farm:CommoditySpecializationValue" minOccurs="0"/>
+                    
+                    <xs:element name="farmProfile" type="farm:FarmProfileType" minOccurs="0"/>
+                    <xs:element name="farmSize" type="farm:FarmSizeType" minOccurs="0"/>
+                    <xs:element name="commoditySpecializationCalculated" type="farm:CommoditySpecializationValue" minOccurs="0"/>
+                    <xs:element name="diversification" type="farm:DiversificationType" minOccurs="0"/>
+
+                    <xs:element name="householdInfo" type="farm:HouseholdInfoType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="labourInput" type="farm:LabourInputType" minOccurs="0"/>
+                    <xs:element name="mainMarketAccessTime" type="xs:duration" minOccurs="0"/>
+
+                    <xs:element name="enterprise" type="farm:RuralEnterprisePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="operation" type="farm:AgriculturalOperationPropertyType" minOccurs="0" maxOccurs="unbounded"/> 
+                    <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+                    <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+                    
                     <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
                     <xs:element ref="farm:_GenericApplicationPropertyOfRuralProperty" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:element name="adeOfBuilding" type="farm:FarmBuildingPropertiesType" substitutionGroup="bldg:_ADEOfBuilding"/>
+    <xs:complexType name="FarmBuildingPropertiesType">
+        <xs:sequence>
+            <xs:element name="buildingType" type="gml:CodeType" minOccurs="0">
+                <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:buildingtype</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="purpose" type="xs:string" minOccurs="0"/>
+            <xs:element name="constructionYear" type="xs:gYear" minOccurs="0"/>
+            <xs:element name="associatedEnterpriseRef" type="gml:ReferenceType" minOccurs="0"/> 
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PersonInfoType">
+         <xs:sequence>
+             <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+             <xs:element name="surname" type="xs:string" minOccurs="0"/>
+             <xs:element name="contactNumber" type="xs:string" minOccurs="0"/>
+             <xs:element name="sex" type="gml:CodeType" minOccurs="0"/>
+             <xs:element name="age" type="xs:integer" minOccurs="0"/>
+             <xs:element name="educationLevel" type="gml:CodeType" minOccurs="0"/>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseholdInfoType">
+        <xs:sequence>
+            <xs:element name="householdID" type="xs:string" minOccurs="0"/>
+            <xs:element name="numberOfMembers" type="xs:positiveInteger"/>
+            <xs:element name="member" type="farm:HouseholdMemberType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseholdMemberType">
+        <xs:complexContent>
+             <xs:extension base="farm:PersonInfoType"> <xs:sequence>
+                    <xs:element name="memberID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="relationshipToHead" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="workedOnHolding" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="offFarmIncomeSources" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LabourInputType">
+        <xs:sequence>
+             <xs:element name="totalFamilyLabourTime" type="xs:duration" minOccurs="0"/>
+             <xs:element name="totalHiredLabourTime" type="xs:duration" minOccurs="0"/>
+             <xs:element name="hiredContractorUsed" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FarmProfileType">
+         <xs:sequence>
+            <xs:element name="legalStatus" type="farm:LegalStatusValue"/>
+            <xs:element name="marketIntegration" type="farm:MarketIntegrationValue"/>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FarmSizeType">
+        <xs:sequence>
+            <xs:element name="physicalSizeAAU" type="gml:AreaType" minOccurs="0"/>
+            <xs:element name="economicSize" type="farm:EconomicSizeType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EconomicSizeType">
+        <xs:sequence>
+            <xs:element name="totalAgriculturalOutput" type="gml:MeasureType"/>
+            <xs:element name="cropOutput" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="livestockOutput" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="calculationReferencePeriod" type="gml:TimePeriodPropertyType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DiversificationType">
+         <xs:sequence>
+            <xs:element name="hasOtherEconomicActivity" type="xs:boolean"/>
+            <xs:element name="otherEconomicActivityType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+                 <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agris:activitylist</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="significanceOfOtherActivity" type="farm:SignificanceValue" minOccurs="0"/>
+            <xs:element name="shareOfNonAgriculturalOutput" type="xs:double" minOccurs="0">
+                 <xs:annotation><xs:documentation>Share from 0.0 to 1.0</xs:documentation></xs:annotation>
+            </xs:element>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="LegalStatusValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="civilPerson"/>
+            <xs:enumeration value="groupOfCivilPersons"/>
+            <xs:enumeration value="juridicalPerson"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MarketIntegrationValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mainlyForOwnConsumption"/>
+            <xs:enumeration value="mainlyForSale"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CommoditySpecializationValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="cropProduction"/>
+            <xs:enumeration value="livestockProduction"/>
+            <xs:enumeration value="mixed"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SignificanceValue">
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="significant"/>
+            <xs:enumeration value="marginal"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProducerTypeValue">
+        <xs:annotation><xs:documentation xml:lang="en">Type of producer role on the land.</xs:documentation><xs:documentation xml:lang="pt-br">Tipo de papel do produtor na terra.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="owner"/>
+            <xs:enumeration value="tenant"/>
+            <xs:enumeration value="partner"/>
+            <xs:enumeration value="occupant"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     </xs:schema>
