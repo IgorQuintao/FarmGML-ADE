@@ -11,6 +11,8 @@
      "http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
       https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/FarmGML.xsd 
       https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-core.xsd
+      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-hooks.xsd
+      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-enterprise.xsd
       http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
       http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd"
     gml:id="FarmModel_001">
