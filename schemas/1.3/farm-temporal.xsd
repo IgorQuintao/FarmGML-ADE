@@ -8,8 +8,8 @@
     elementFormDefault="qualified">
 
     <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/core.xsd C:/Users/Usuario/Documents/GitHub/FarmGML-ADE/schemas/ogc/citygml/3.0/cityGMLBase.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="../ogc/citygml/3.0/landUse.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="../ogc/citygml/3.0/building.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/building.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>  
 
