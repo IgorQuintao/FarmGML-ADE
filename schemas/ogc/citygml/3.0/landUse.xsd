@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:luse="http://www.opengis.net/citygml/landuse/3.0" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/landuse/3.0" version="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:core="http://www.opengis.net/citygml/3.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:luse="http://www.opengis.net/citygml/landuse/3.0" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.opengis.net/citygml/landuse/3.0" 
+version="3.0.0">
+
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./cityGMLBase.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
   <element name="LandUse" substitutionGroup="core:AbstractTopLevelCityObject" type="luse:LandUseType">
     <annotation>
       <documentation>SIG3D: Object describing an area of the earth's surface dedicated to a specific land use or having a specific land cover with or without vegetation, such as sand, rock, mud flats, forest, grasslands, etc (i.e. the physical appearance).</documentation>

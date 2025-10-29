@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:frn="http://www.opengis.net/citygml/cityfurniture/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/cityfurniture/3.0" version="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:core="http://www.opengis.net/citygml/3.0" 
+xmlns:frn="http://www.opengis.net/citygml/cityfurniture/3.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.opengis.net/citygml/cityfurniture/3.0" 
+version="3.0.0">
+
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./cityGMLBase.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
   <element name="CityFurniture" substitutionGroup="core:AbstractTopLevelCityObject" type="frn:CityFurnitureType">
     <annotation>
       <documentation>City furniture is a collective term for objects and pieces of equipment installed on streets and roads for various purposes. It includes benches, traffic barriers, bollards, post boxes, phone boxes, streetlamps, traffic lights, traffic signs, bus stops, tram stops, taxi stands, public lavatories, fountains, watering troughs, memorials, public sculptures, and waste receptacles. [Wikipedia]</documentation>

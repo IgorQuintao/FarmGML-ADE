@@ -1,10 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/generics/3.0" version="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:core="http://www.opengis.net/citygml/3.0" 
+xmlns:gen="http://www.opengis.net/citygml/generics/3.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.opengis.net/citygml/generics/3.0" 
+version="3.0.0">
+
   <annotation>
     <documentation>"SIG3D: Generic Attribute of type ""date""."</documentation>
   </annotation>
+
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./cityGMLBase.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
   <element abstract="true" name="AbstractGenericAttribute" substitutionGroup="gml:AbstractObject" type="gen:AbstractGenericAttributeType"/>
   <complexType abstract="true" name="AbstractGenericAttributeType">
     <sequence>

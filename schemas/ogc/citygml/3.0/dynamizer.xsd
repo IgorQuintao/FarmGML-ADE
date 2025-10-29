@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sos="http://www.opengis.net/sos/2.0" xmlns:tsml="http://www.opengis.net/tsml/1.0" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/dynamizer/3.0" version="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:core="http://www.opengis.net/citygml/3.0" 
+xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0" 
+xmlns:gen="http://www.opengis.net/citygml/generics/3.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:sos="http://www.opengis.net/sos/2.0" 
+xmlns:tsml="http://www.opengis.net/tsml/1.0" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.opengis.net/citygml/dynamizer/3.0" 
+version="3.0.0">
+
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./cityGMLBase.xsd"/>
   <import namespace="http://www.opengis.net/citygml/generics/3.0" schemaLocation="./generics.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/sos/2.0" schemaLocation="http://schemas.opengis.net/sos/2.0/sosGetObservation.xsd"/>
   <import namespace="http://www.opengis.net/tsml/1.0" schemaLocation="http://schemas.opengis.net/tsml/1.0/timeseriesML.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
   <element abstract="true" name="AbstractTimeseries" substitutionGroup="gml:AbstractFeature" type="dyn:AbstractTimeseriesType"/>
   <complexType abstract="true" name="AbstractTimeseriesType">
     <complexContent>

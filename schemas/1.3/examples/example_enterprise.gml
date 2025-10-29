@@ -6,9 +6,12 @@
     xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
     xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-      http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/cityGMLBase.xsd
-      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd"
+    xsi:schemaLocation=
+     "http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
+      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/FarmGML.xsd 
+      https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-core.xsd
+      http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
+      http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd"
     gml:id="FarmModel_Enterprise_2025">
 
   <core:cityObjectMember>

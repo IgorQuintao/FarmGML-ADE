@@ -1,8 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bldg="http://www.opengis.net/citygml/building/3.0" xmlns:con="http://www.opengis.net/citygml/construction/3.0" xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/citygml/building/3.0" version="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:bldg="http://www.opengis.net/citygml/building/3.0" 
+xmlns:con="http://www.opengis.net/citygml/construction/3.0" 
+xmlns:core="http://www.opengis.net/citygml/3.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+elementFormDefault="qualified" 
+targetNamespace="http://www.opengis.net/citygml/building/3.0" 
+version="3.0.0">
+
   <import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="./cityGMLBase.xsd"/>
   <import namespace="http://www.opengis.net/citygml/construction/3.0" schemaLocation="./construction.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
   <complexType name="AbstractBuildingPropertyType">
     <choice minOccurs="0">
       <element ref="bldg:Building"/>
