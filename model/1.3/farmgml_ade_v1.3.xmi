@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_TVQL8LRcEfCP47ZKKkal-g" name="farmgml_ade_v1.3">
+  <eAnnotations xmi:id="_TVQL8bRcEfCP47ZKKkal-g" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_TVQL8rRcEfCP47ZKKkal-g" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQL87RcEfCP47ZKKkal-g" value="3.0.0"/>
+    </contents>
+    <contents xmi:type="uml:Property" xmi:id="_TVQL9LRcEfCP47ZKKkal-g" name="isRoundTrip"/>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQL9bRcEfCP47ZKKkal-g" name="farm-hooks"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQL9rRcEfCP47ZKKkal-g" name="farm-enterprise">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQL97RcEfCP47ZKKkal-g" name="ForestryUnit">
+      <ownedAttribute xmi:id="_TVQL-LRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMFrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQL-bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQL-rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQL-7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQL_LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQL_bRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQL_rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQL_7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMALRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMAbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMArRcEfCP47ZKKkal-g" name="productType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMA7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMBLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMBbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMBrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMB7RcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMCLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMCbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMCrRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMC7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMDLRcEfCP47ZKKkal-g" name="rotationYears" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMDbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMDrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMD7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMELRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMEbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMErRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQME7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMFLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMFbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMFrRcEfCP47ZKKkal-g" memberEnd="_TVQL-LRcEfCP47ZKKkal-g _TVQOwbRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQMF7RcEfCP47ZKKkal-g" name="LivestockUnit">
+      <ownedAttribute xmi:id="_TVQMGLRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMNrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMGbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMGrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMG7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMHLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMHbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMHrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMH7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMILRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMIbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMIrRcEfCP47ZKKkal-g" name="animalType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMI7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMJLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMJbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMJrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMJ7RcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMKLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMKbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMKrRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMK7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMLLRcEfCP47ZKKkal-g" name="herdSize" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMLbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMLrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQML7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMMLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMMbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMMrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMM7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMNLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMNbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMNrRcEfCP47ZKKkal-g" memberEnd="_TVQMGLRcEfCP47ZKKkal-g _TVQOuLRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQMN7RcEfCP47ZKKkal-g" name="AquacultureUnit">
+      <ownedAttribute xmi:id="_TVQMOLRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMVrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMObRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMOrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMO7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMPLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMPbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMPrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMP7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMQLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMQbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMQrRcEfCP47ZKKkal-g" name="species" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMQ7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMRLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMRbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMRrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMR7RcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMSLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMSbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMSrRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMS7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMTLRcEfCP47ZKKkal-g" name="pondArea" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMTbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMTrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMT7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMULRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMUbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMUrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMU7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMVLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMVbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMVrRcEfCP47ZKKkal-g" memberEnd="_TVQMOLRcEfCP47ZKKkal-g _TVQOyrRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQMV7RcEfCP47ZKKkal-g" name="AgriculturalEnterprise">
+      <ownedAttribute xmi:id="_TVQMWLRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMdrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMWbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMWrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMW7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMXLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMXbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMXrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMX7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMYLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMYbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMYrRcEfCP47ZKKkal-g" name="enterpriseType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMY7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMZLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMZbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMZrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMZ7RcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMaLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMabRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMarRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMa7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMbLRcEfCP47ZKKkal-g" name="startDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMbbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMbrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMb7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMcLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMcbRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMcrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMc7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMdLRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMdbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMdrRcEfCP47ZKKkal-g" memberEnd="_TVQMWLRcEfCP47ZKKkal-g _TVQOr7RcEfCP47ZKKkal-g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQMd7RcEfCP47ZKKkal-g" name="farm-production">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQMeLRcEfCP47ZKKkal-g" name="AbstractCropArea">
+      <ownedAttribute xmi:id="_TVQMebRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMvrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMerRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMe7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMfLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMfbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMfrRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMf7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMgLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQMgbRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMgrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMg7RcEfCP47ZKKkal-g" name="annualCropArea" visibility="public" type="_TVQMwrRcEfCP47ZKKkal-g" isUnique="false" association="_TVQMv7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMhLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMhbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMhrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMh7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMiLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMibRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMirRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMi7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMjLRcEfCP47ZKKkal-g" name="perennialCropArea" visibility="public" type="_TVQM3LRcEfCP47ZKKkal-g" isUnique="false" association="_TVQMwLRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMjbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMjrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMj7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMkLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMkbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMkrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMk7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMlLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMlbRcEfCP47ZKKkal-g" name="harvestedLot" visibility="public" type="_TVQM7rRcEfCP47ZKKkal-g" isUnique="false" association="_TVQMwbRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMlrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMl7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMmLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMmbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMmrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMm7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMnLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMnbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMnrRcEfCP47ZKKkal-g" name="cropName" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMn7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMoLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMobRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMorRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMo7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMpLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMpbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMprRcEfCP47ZKKkal-g" name="cropCode" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMp7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMqLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMqbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMqrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMq7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMrLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMrbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMrrRcEfCP47ZKKkal-g" name="plantingDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMr7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMsLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMsbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMsrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMs7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMtLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMtbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMtrRcEfCP47ZKKkal-g" name="cropGrowthStage" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMt7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMuLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMubRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMurRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMu7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMvLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMvbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMvrRcEfCP47ZKKkal-g" memberEnd="_TVQMebRcEfCP47ZKKkal-g _TVQO3LRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMv7RcEfCP47ZKKkal-g" memberEnd="_TVQMg7RcEfCP47ZKKkal-g _TVQMw7RcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMwLRcEfCP47ZKKkal-g" memberEnd="_TVQMjLRcEfCP47ZKKkal-g _TVQM3bRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQMwbRcEfCP47ZKKkal-g" memberEnd="_TVQMlbRcEfCP47ZKKkal-g _TVQM77RcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQMwrRcEfCP47ZKKkal-g" name="AnnualCropArea">
+      <ownedAttribute xmi:id="_TVQMw7RcEfCP47ZKKkal-g" name="abstractCropArea" visibility="public" type="_TVQMeLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMv7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQMxLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMxbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMxrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMx7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMyLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQMybRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMyrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQMy7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQMzLRcEfCP47ZKKkal-g" name="cropRotationInfo" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQMzbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQMzrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQMz7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM0LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM0bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM0rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM07RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQM1LRcEfCP47ZKKkal-g" name="plantingDataRotation" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQM1bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQM1rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM17RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM2LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM2bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM2rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM27RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQM3LRcEfCP47ZKKkal-g" name="PerennialCropArea">
+      <ownedAttribute xmi:id="_TVQM3bRcEfCP47ZKKkal-g" name="abstractCropArea" visibility="public" type="_TVQMeLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMwLRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQM3rRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQM37RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM4LRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM4bRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM4rRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM47RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM5LRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQM5bRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQM5rRcEfCP47ZKKkal-g" name="lastPruningDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQM57RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQM6LRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM6bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM6rRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM67RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM7LRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM7bRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQM7rRcEfCP47ZKKkal-g" name="HarvestedLot">
+      <ownedAttribute xmi:id="_TVQM77RcEfCP47ZKKkal-g" name="abstractCropArea" visibility="public" type="_TVQMeLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQMwbRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQM8LRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQM8bRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM8rRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM87RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM9LRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM9bRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM9rRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQM97RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQM-LRcEfCP47ZKKkal-g" name="quantityHarvested" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQM-bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQM-rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM-7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM_LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM_bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQM_rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQM_7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNALRcEfCP47ZKKkal-g" name="harvestDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNAbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNArRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNA7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNBLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNBbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNBrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNB7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQNCLRcEfCP47ZKKkal-g" name="farm-opration">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNCbRcEfCP47ZKKkal-g" name="FarmOperation">
+      <ownedAttribute xmi:id="_TVQNCrRcEfCP47ZKKkal-g" name="inputUsed" visibility="public" type="_TVQNJLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQNI7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNC7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNDLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNDbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNDrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQND7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNELRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNEbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNErRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNE7RcEfCP47ZKKkal-g" name="operationType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNFLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNFbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNFrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNF7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNGLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNGbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNGrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNG7RcEfCP47ZKKkal-g" name="operationDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNHLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNHbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNHrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNH7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNILRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNIbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNIrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQNI7RcEfCP47ZKKkal-g" memberEnd="_TVQNCrRcEfCP47ZKKkal-g _TVQNJbRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNJLRcEfCP47ZKKkal-g" name="InputUsed">
+      <ownedAttribute xmi:id="_TVQNJbRcEfCP47ZKKkal-g" name="farmOperation" visibility="public" type="_TVQNCbRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQNI7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNJrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNJ7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNKLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNKbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNKrRcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNK7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNLLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQNLbRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNLrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNL7RcEfCP47ZKKkal-g" name="inputType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNMLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNMbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNMrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNM7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNNLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNNbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNNrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNN7RcEfCP47ZKKkal-g" name="productName" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNOLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNObRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNOrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNO7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNPLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNPbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNPrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNP7RcEfCP47ZKKkal-g" name="quantityApplied" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNQLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNQbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNQrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNQ7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNRLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNRbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNRrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQNR7RcEfCP47ZKKkal-g" name="farm-risk">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNSLRcEfCP47ZKKkal-g" name="InsuranceRisk">
+      <ownedAttribute xmi:id="_TVQNSbRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQNc7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNSrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNS7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNTLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNTbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNTrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNT7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNULRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNUbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNUrRcEfCP47ZKKkal-g" name="environmentalHazard" visibility="public" type="_TVQNdbRcEfCP47ZKKkal-g" isUnique="false" association="_TVQNdLRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNU7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNVLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNVbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNVrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNV7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNWLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNWbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNWrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNW7RcEfCP47ZKKkal-g" name="zarcScore" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNXLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNXbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNXrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNX7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNYLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNYbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNYrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNY7RcEfCP47ZKKkal-g" name="riskClassificationKey" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNZLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNZbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNZrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNZ7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNaLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNabRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNarRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNa7RcEfCP47ZKKkal-g" name="calculationDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNbLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNbbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNbrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNb7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNcLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNcbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNcrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQNc7RcEfCP47ZKKkal-g" memberEnd="_TVQNSbRcEfCP47ZKKkal-g _TVQO5bRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQNdLRcEfCP47ZKKkal-g" memberEnd="_TVQNUrRcEfCP47ZKKkal-g _TVQNdrRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNdbRcEfCP47ZKKkal-g" name="EnvironmentalHazard">
+      <ownedAttribute xmi:id="_TVQNdrRcEfCP47ZKKkal-g" name="insuranceRisk" visibility="public" type="_TVQNSLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQNdLRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNd7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNeLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNebRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNerRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNe7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNfLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNfbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNfrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNf7RcEfCP47ZKKkal-g" name="hazardType" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNgLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNgbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNgrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNg7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNhLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNhbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNhrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNh7RcEfCP47ZKKkal-g" name="severityLevel" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNiLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNibRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNirRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNi7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNjLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNjbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNjrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQNj7RcEfCP47ZKKkal-g" name="farm-sustainability">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNkLRcEfCP47ZKKkal-g" name="SustainabilityIndex">
+      <ownedAttribute xmi:id="_TVQNkbRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQNurRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNkrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNk7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNlLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNlbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNlrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNl7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNmLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNmbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNmrRcEfCP47ZKKkal-g" name="carbonFootprint" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNm7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNnLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNnbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNnrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNn7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNoLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNobRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNorRcEfCP47ZKKkal-g" name="waterUsageEfficiency" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNo7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNpLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNpbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNprRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNp7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNqLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNqbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNqrRcEfCP47ZKKkal-g" name="biodiversityIndex" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNq7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNrLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNrbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNrrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNr7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNsLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNsbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNsrRcEfCP47ZKKkal-g" name="bioinputUsageRate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQNs7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNtLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNtbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNtrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNt7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNuLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNubRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQNurRcEfCP47ZKKkal-g" memberEnd="_TVQNkbRcEfCP47ZKKkal-g _TVQO7rRcEfCP47ZKKkal-g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQNu7RcEfCP47ZKKkal-g" name="farm-temporal">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQNvLRcEfCP47ZKKkal-g" name="LifecycleInfo">
+      <ownedAttribute xmi:id="_TVQNvbRcEfCP47ZKKkal-g" name="timeSlice" visibility="public" type="_TVQN6rRcEfCP47ZKKkal-g" isUnique="false" association="_TVQN6LRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNvrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNv7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNwLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNwbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNwrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNw7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNxLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNxbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQNxrRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQN6bRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQNx7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQNyLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNybRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNyrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNy7RcEfCP47ZKKkal-g" value="*"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQNzLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQNzbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TVQNzrRcEfCP47ZKKkal-g" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQNz7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQN0LRcEfCP47ZKKkal-g" name="creationDate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQN0bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN0rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN07RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN1LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN1bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN1rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN17RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQN2LRcEfCP47ZKKkal-g" name="lastUpdate" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQN2bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN2rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN27RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN3LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN3bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN3rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN37RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQN4LRcEfCP47ZKKkal-g" name="validityPeriod" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQN4bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN4rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN47RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN5LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN5bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN5rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN57RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQN6LRcEfCP47ZKKkal-g" memberEnd="_TVQNvbRcEfCP47ZKKkal-g _TVQN67RcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQN6bRcEfCP47ZKKkal-g" memberEnd="_TVQNxrRcEfCP47ZKKkal-g _TVQO97RcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQN6rRcEfCP47ZKKkal-g" name="TimeSlice">
+      <ownedAttribute xmi:id="_TVQN67RcEfCP47ZKKkal-g" name="lifeCycleInfo" visibility="public" type="_TVQNvLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQN6LRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQN7LRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN7bRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN7rRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN77RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN8LRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN8bRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN8rRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQN87RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQN9LRcEfCP47ZKKkal-g" name="startTime" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQN9bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN9rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN97RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN-LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN-bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQN-rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN-7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQN_LRcEfCP47ZKKkal-g" name="endTime" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQN_bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQN_rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQN_7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOALRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOAbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOArRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOA7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOBLRcEfCP47ZKKkal-g" name="version" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOBbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOBrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOB7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOCLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOCbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOCrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOC7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TVQODLRcEfCP47ZKKkal-g" name="farm-core">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQODbRcEfCP47ZKKkal-g" name="FarmSize">
+      <ownedAttribute xmi:id="_TVQODrRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQOMbRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOD7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOELRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOEbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOErRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOE7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOFLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOFbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOFrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOF7RcEfCP47ZKKkal-g" name="physicalSizeAAU" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOGLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOGbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOGrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOG7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOHLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOHbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOHrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOH7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOILRcEfCP47ZKKkal-g" name="economicSize" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOIbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOIrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOI7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOJLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOJbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOJrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOJ7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOKLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOKbRcEfCP47ZKKkal-g" name="Attribute" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOKrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOK7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOLLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOLbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOLrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOL7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOMLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQOMbRcEfCP47ZKKkal-g" memberEnd="_TVQODrRcEfCP47ZKKkal-g _TVQOprRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQOMrRcEfCP47ZKKkal-g" name="FarmProfile">
+      <ownedComment xmi:id="_TVQOM7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQONLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQONbRcEfCP47ZKKkal-g" name="NoteType_Name">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQONrRcEfCP47ZKKkal-g" value="description"/>
+          </contents>
+        </eAnnotations>
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_TVQON7RcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQOg7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOOLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOObRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOOrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOO7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOPLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOPbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOPrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOP7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOQLRcEfCP47ZKKkal-g" name="legalStatus" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOQbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOQrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOQ7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQORLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQORbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQORrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOR7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOSLRcEfCP47ZKKkal-g" name="marketIntegration" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOSbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOSrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOS7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOTLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOTbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOTrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOT7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQOULRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQOUbRcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQOUrRcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOU7RcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>Grau de integração ao mercado</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOVLRcEfCP47ZKKkal-g" name="physicalSizeAAU" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOVbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOVrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOV7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOWLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOWbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOWrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOW7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQOXLRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQOXbRcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQOXrRcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOX7RcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>Tamanho físico (ha)</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOYLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOYbRcEfCP47ZKKkal-g" name="totalAgriculturalOutput" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOYrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOY7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOZLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOZbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOZrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOZ7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOaLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQOabRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQOarRcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQOa7RcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQObLRcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>Valor total da produção</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQObbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQObrRcEfCP47ZKKkal-g" name="livestockOutput" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOb7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOcLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOcbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOcrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOc7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOdLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOdbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQOdrRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQOd7RcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQOeLRcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOebRcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>Valor da produção animal</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOerRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOe7RcEfCP47ZKKkal-g" name="Attribute" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOfLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOfbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOfrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOf7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOgLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOgbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOgrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQOg7RcEfCP47ZKKkal-g" memberEnd="_TVQON7RcEfCP47ZKKkal-g _TVQOnbRcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQOhLRcEfCP47ZKKkal-g" name="FarmLegalInfo">
+      <ownedAttribute xmi:id="_TVQOhbRcEfCP47ZKKkal-g" name="ruralProperty" visibility="public" type="_TVQOmLRcEfCP47ZKKkal-g" isUnique="false" aggregation="composite" association="_TVQOl7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOhrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOh7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOiLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOibRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOirRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOi7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOjLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOjbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOjrRcEfCP47ZKKkal-g" name="CAR/SNCI/Mat." visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQOj7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOkLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOkbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOkrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOk7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOlLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOlbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOlrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TVQOl7RcEfCP47ZKKkal-g" memberEnd="_TVQOhbRcEfCP47ZKKkal-g _TVQO07RcEfCP47ZKKkal-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TVQOmLRcEfCP47ZKKkal-g" name="RuralProperty">
+      <ownedComment xmi:id="_TVQOmbRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOmrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOm7RcEfCP47ZKKkal-g" name="NoteType_Name">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOnLRcEfCP47ZKKkal-g" value="description"/>
+          </contents>
+        </eAnnotations>
+        <body>FeatureType: farm:RuralPropertyType
+SubstitutionGroup: luse:LandUse
+Description: Represents a rural property including administrative and economic information.
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_TVQOnbRcEfCP47ZKKkal-g" name="farmProfile" visibility="public" type="_TVQOMrRcEfCP47ZKKkal-g" isUnique="false" association="_TVQOg7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOnrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOn7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOoLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOobRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOorRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOo7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOpLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOpbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOprRcEfCP47ZKKkal-g" name="farmSize" visibility="public" type="_TVQODbRcEfCP47ZKKkal-g" isUnique="false" association="_TVQOMbRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOp7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOqLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOqbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOqrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOq7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOrLRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOrbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOrrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOr7RcEfCP47ZKKkal-g" name="agriculturalEnterprise" visibility="public" type="_TVQMV7RcEfCP47ZKKkal-g" isUnique="false" association="_TVQMdrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOsLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOsbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOsrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOs7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOtLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOtbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOtrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOt7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOuLRcEfCP47ZKKkal-g" name="livestockUnit" visibility="public" type="_TVQMF7RcEfCP47ZKKkal-g" isUnique="false" association="_TVQMNrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOubRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOurRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOu7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOvLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOvbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOvrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOv7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOwLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOwbRcEfCP47ZKKkal-g" name="forestryUnit" visibility="public" type="_TVQL97RcEfCP47ZKKkal-g" isUnique="false" association="_TVQMFrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOwrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOw7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOxLRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOxbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOxrRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOx7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOyLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQOybRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQOyrRcEfCP47ZKKkal-g" name="aquacultureUnit" visibility="public" type="_TVQMN7RcEfCP47ZKKkal-g" isUnique="false" association="_TVQMVrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQOy7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQOzLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOzbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQOzrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQOz7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO0LRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO0bRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO0rRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQO07RcEfCP47ZKKkal-g" name="farmLegalInfo" visibility="public" type="_TVQOhLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQOl7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQO1LRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQO1bRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO1rRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO17RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO2LRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO2bRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO2rRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO27RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQO3LRcEfCP47ZKKkal-g" name="abstractCropArea" visibility="public" type="_TVQMeLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQMvrRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQO3bRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQO3rRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO37RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO4LRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO4bRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO4rRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO47RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO5LRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQO5bRcEfCP47ZKKkal-g" name="insuranceRisk" visibility="public" type="_TVQNSLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQNc7RcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQO5rRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQO57RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO6LRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO6bRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO6rRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO67RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO7LRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO7bRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQO7rRcEfCP47ZKKkal-g" name="sustainabilityIndex" visibility="public" type="_TVQNkLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQNurRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQO77RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQO8LRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO8bRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO8rRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO87RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO9LRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO9bRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO9rRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQO97RcEfCP47ZKKkal-g" name="lifecycleInfo" visibility="public" type="_TVQNvLRcEfCP47ZKKkal-g" isUnique="false" association="_TVQN6bRcEfCP47ZKKkal-g">
+        <eAnnotations xmi:id="_TVQO-LRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQO-bRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO-rRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO-7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO_LRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQO_bRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQO_rRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQO_7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQPALRcEfCP47ZKKkal-g" name="name" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQPAbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQPArRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPA7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPBLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPBbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPBrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPB7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQPCLRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQPCbRcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQPCrRcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPC7RcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>&lt;Enter note text here></body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQPDLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQPDbRcEfCP47ZKKkal-g" name="holderID" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQPDrRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQPD7RcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPELRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPEbRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPErRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPE7RcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPFLRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_TVQPFbRcEfCP47ZKKkal-g">
+          <eAnnotations xmi:id="_TVQPFrRcEfCP47ZKKkal-g" source="Objing">
+            <contents xmi:type="uml:Property" xmi:id="_TVQPF7RcEfCP47ZKKkal-g" name="NoteType_Name">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPGLRcEfCP47ZKKkal-g" value="description"/>
+            </contents>
+          </eAnnotations>
+          <body>Unique identifier of the property owner (CPF or CNPJ).</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQPGbRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQPGrRcEfCP47ZKKkal-g" name="carCode" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQPG7RcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQPHLRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPHbRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPHrRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPH7RcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPILRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPIbRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQPIrRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQPI7RcEfCP47ZKKkal-g" name="ibgeCode" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQPJLRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQPJbRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPJrRcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPJ7RcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPKLRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPKbRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPKrRcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQPK7RcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TVQPLLRcEfCP47ZKKkal-g" name="keepsRecords" visibility="public" isUnique="false">
+        <eAnnotations xmi:id="_TVQPLbRcEfCP47ZKKkal-g" source="Objing">
+          <contents xmi:type="uml:Property" xmi:id="_TVQPLrRcEfCP47ZKKkal-g" name="MultiMin">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPL7RcEfCP47ZKKkal-g" value="0"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPMLRcEfCP47ZKKkal-g" name="MultiMax">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPMbRcEfCP47ZKKkal-g" value="1"/>
+          </contents>
+          <contents xmi:type="uml:Property" xmi:id="_TVQPMrRcEfCP47ZKKkal-g" name="AccessMode">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_TVQPM7RcEfCP47ZKKkal-g" value="no_access"/>
+          </contents>
+        </eAnnotations>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TVQPNLRcEfCP47ZKKkal-g"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
