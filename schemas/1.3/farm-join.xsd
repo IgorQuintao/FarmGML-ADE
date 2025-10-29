@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:core="http://www.opengis.net/citygml/3.0"
+    xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
+    xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
+    xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+    xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
+    targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
+    elementFormDefault="qualified">
+
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            FarmGML Application Domain Extension (ADE) for CityGML 3.0
+            Version: 1.3 (Refactored based on critical analysis)
+            Date: 2025-10-25
+            Description: Extends CityGML 3.0 for the agri-food value chain. Incorporates FAO's Farm Typology (via AGRIS), AgrIMAF farm-to-fork scope, ZARC NM risk assessment, and Brazilian Digital Agro Strategy insights. This version refactors the structure into packages, enhances CityGML compliance (Hooks, Generics), clarifies semantics (English terms, external CodeLists), adds explicit geometry and temporal elements (TimeSlice, Lifecycle).
+        </xs:documentation>
+        <xs:documentation xml:lang="pt-br">
+            Extensão de Domínio de Aplicação (ADE) FarmGML para CityGML 3.0
+            Versão: 1.3 (Refatorada com base na análise crítica)
+            Data: 2025-10-25
+            Descrição: Estende CityGML 3.0 para a cadeia de valor agroalimentar. Incorpora a Tipologia de Fazendas da FAO (via AGRIS), escopo farm-to-fork AgrIMAF, avaliação de risco ZARC NM e insights da Estratégia Agrodigital Brasileira. Esta versão refatora a estrutura em pacotes, melhora a conformidade com CityGML (Hooks, Genéricos), clarifica a semântica (termos em inglês, CodeLists externas), adiciona geometria explícita e elementos temporais (TimeSlice, Lifecycle).
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/core.xsd C:/Users/Usuario/Documents/GitHub/FarmGML-ADE/schemas/ogc/citygml/3.0/cityGMLBase.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/vegetation.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/landUse.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/building.xsd"/>
+    <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="xs:anyType" abstract="true" substitutionGroup="core:_GenericApplicationProperty"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="xs:anyType" abstract="true" substitutionGroup="core:_GenericApplicationProperty"/>
+    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="xs:anyType" abstract="true" substitutionGroup="core:_GenericApplicationProperty"/>
+    <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="xs:anyType" abstract="true" substitutionGroup="core:_GenericApplicationProperty"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="xs:anyType" abstract="true" substitutionGroup="core:_GenericApplicationProperty"/>
+
+
+    <xs:complexType name="_ADEOfLandUseType">
+        <xs:annotation>
+            <xs:documentation>Conceptual hook for LandUse extensions, mirroring _ADEOfBuilding.</xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+    <xs:element name="_ADEOfLandUse" type="farm:_ADEOfLandUseType" abstract="true" substitutionGroup="core:_ADEComponent"/>
+
+
+    <xs:annotation><xs:appinfo>Package: farm-core</xs:appinfo></xs:annotation>
+
+    <xs:element name="RuralProperty" type="farm:RuralPropertyType" substitutionGroup="luse:LandUse">
+        <xs:annotation><xs:documentation>Top-level feature representing a rural property (Agricultural Holding).</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="RuralPropertyType">
+        <xs:complexContent>
+            <xs:extension base="luse:LandUseType">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0"/>
+                    <xs:element name="holderID" type="xs:string" minOccurs="0" />
+                    <xs:element name="managerInfo" type="farm:PersonInfoType" minOccurs="0" />
+                    <xs:element name="carCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="ibgeCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="officialID" type="xs:string" minOccurs="0" />
+                    <xs:element name="lastCensusID" type="xs:string" minOccurs="0" />
+                    <xs:element name="mainLocationType" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="landTenureType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="keepsRecords" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="mainAgriculturalFocus" type="farm:CommoditySpecializationValue" minOccurs="0"/>
+
+                    <xs:element name="farmProfile" type="farm:FarmProfileType" minOccurs="0"/>
+                    <xs:element name="farmSize" type="farm:FarmSizeType" minOccurs="0"/>
+                    <xs:element name="commoditySpecializationCalculated" type="farm:CommoditySpecializationValue" minOccurs="0"/>
+                    <xs:element name="diversification" type="farm:DiversificationType" minOccurs="0"/>
+
+                    <xs:element name="householdInfo" type="farm:HouseholdInfoType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="labourInput" type="farm:LabourInputType" minOccurs="0"/>
+                    <xs:element name="mainMarketAccessTime" type="xs:duration" minOccurs="0"/>
+
+                    <xs:element name="enterprise" type="farm:RuralEnterprisePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="operation" type="farm:AgriculturalOperationPropertyType" minOccurs="0" maxOccurs="unbounded"/> <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+                    <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+
+                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+
+                    <xs:element ref="farm:_GenericApplicationPropertyOfRuralProperty" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="adeOfBuilding" type="farm:FarmBuildingPropertiesType" substitutionGroup="bldg:_ADEOfBuilding"/>
+    <xs:complexType name="FarmBuildingPropertiesType">
+        <xs:sequence>
+            <xs:element name="buildingType" type="gml:CodeType" minOccurs="0">
+                <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:buildingtype</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="purpose" type="xs:string" minOccurs="0"/>
+            <xs:element name="constructionYear" type="xs:gYear" minOccurs="0"/>
+            <xs:element name="associatedEnterpriseRef" type="gml:ReferenceType" minOccurs="0"/> </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PersonInfoType">
+         <xs:sequence>
+             <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+             <xs:element name="surname" type="xs:string" minOccurs="0"/>
+             <xs:element name="contactNumber" type="xs:string" minOccurs="0"/>
+             <xs:element name="sex" type="gml:CodeType" minOccurs="0"/>
+             <xs:element name="age" type="xs:integer" minOccurs="0"/>
+             <xs:element name="educationLevel" type="gml:CodeType" minOccurs="0"/>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseholdInfoType">
+        <xs:sequence>
+            <xs:element name="householdID" type="xs:string" minOccurs="0"/>
+            <xs:element name="numberOfMembers" type="xs:positiveInteger"/>
+            <xs:element name="member" type="farm:HouseholdMemberType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseholdMemberType">
+        <xs:complexContent>
+             <xs:extension base="farm:PersonInfoType"> <xs:sequence>
+                    <xs:element name="memberID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="relationshipToHead" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="workedOnHolding" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="offFarmIncomeSources" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LabourInputType">
+        <xs:sequence>
+             <xs:element name="totalFamilyLabourTime" type="xs:duration" minOccurs="0"/>
+             <xs:element name="totalHiredLabourTime" type="xs:duration" minOccurs="0"/>
+             <xs:element name="hiredContractorUsed" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FarmProfileType">
+         <xs:sequence>
+            <xs:element name="legalStatus" type="farm:LegalStatusValue"/>
+            <xs:element name="marketIntegration" type="farm:MarketIntegrationValue"/>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FarmSizeType">
+        <xs:sequence>
+            <xs:element name="physicalSizeAAU" type="gml:AreaType" minOccurs="0"/>
+            <xs:element name="economicSize" type="farm:EconomicSizeType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EconomicSizeType">
+        <xs:sequence>
+            <xs:element name="totalAgriculturalOutput" type="gml:MeasureType"/>
+            <xs:element name="cropOutput" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="livestockOutput" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="calculationReferencePeriod" type="gml:TimePeriodPropertyType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DiversificationType">
+         <xs:sequence>
+            <xs:element name="hasOtherEconomicActivity" type="xs:boolean"/>
+            <xs:element name="otherEconomicActivityType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+                 <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agris:activitylist</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="significanceOfOtherActivity" type="farm:SignificanceValue" minOccurs="0"/>
+            <xs:element name="shareOfNonAgriculturalOutput" type="xs:double" minOccurs="0">
+                 <xs:annotation><xs:documentation>Share from 0.0 to 1.0</xs:documentation></xs:annotation>
+            </xs:element>
+         </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="LegalStatusValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="civilPerson"/>
+            <xs:enumeration value="groupOfCivilPersons"/>
+            <xs:enumeration value="juridicalPerson"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MarketIntegrationValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mainlyForOwnConsumption"/>
+            <xs:enumeration value="mainlyForSale"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CommoditySpecializationValue">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="cropProduction"/>
+            <xs:enumeration value="livestockProduction"/>
+            <xs:enumeration value="mixed"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SignificanceValue">
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="significant"/>
+            <xs:enumeration value="marginal"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProducerTypeValue">
+        <xs:annotation><xs:documentation xml:lang="en">Type of producer role on the land.</xs:documentation><xs:documentation xml:lang="pt-br">Tipo de papel do produtor na terra.</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="owner"/>
+            <xs:enumeration value="tenant"/>
+            <xs:enumeration value="partner"/>
+            <xs:enumeration value="occupant"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:annotation><xs:appinfo>Package: farm-enterprise</xs:appinfo></xs:annotation>
+
+    <xs:element name="_AbstractRuralEnterprise" type="farm:AbstractRuralEnterpriseType" abstract="true" substitutionGroup="core:AbstractFeature">
+        <xs:annotation><xs:documentation>Abstract feature for specific types of rural enterprises (livestock, forestry, etc.).</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbstractRuralEnterpriseType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractFeatureType"> <xs:sequence>
+                    <xs:element name="occupiedArea" type="gml:AreaType" minOccurs="0"/>
+                    <xs:element name="startDate" type="xs:date" minOccurs="0"/>
+                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+                    <xs:element ref="farm:_GenericApplicationPropertyOfAbstractRuralEnterprise" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="LivestockEnterprise" type="farm:LivestockEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    <xs:complexType name="LivestockEnterpriseType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractRuralEnterpriseType">
+                <xs:sequence>
+                    <xs:element name="livestockType" type="gml:CodeType">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agris:livestocktype</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="livestockCategory" type="gml:CodeType" minOccurs="0">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agris:livestockcategory</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="numberOfHeads" type="xs:positiveInteger"/>
+                    <xs:element name="feedingPractice" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="hasProductionContract" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="hasMarketingContract" type="xs:boolean" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="AquacultureEnterprise" type="farm:AquacultureEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    <xs:complexType name="AquacultureEnterpriseType">
+         <xs:complexContent>
+            <xs:extension base="farm:AbstractRuralEnterpriseType">
+                <xs:sequence>
+                     <xs:element name="speciesRaised" type="xs:string" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="ForestryEnterprise" type="farm:ForestryEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    <xs:complexType name="ForestryEnterpriseType">
+         <xs:complexContent>
+            <xs:extension base="farm:AbstractRuralEnterpriseType">
+                <xs:sequence>
+                     <xs:element name="productType" type="gml:CodeType" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RuralEnterprisePropertyType">
+        <xs:sequence minOccurs="0">
+             <xs:element ref="farm:_AbstractRuralEnterprise"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </xs:complexType>
+
+
+    <xs:annotation><xs:appinfo>Package: farm-production</xs:appinfo></xs:annotation>
+
+    <xs:element name="_AbstractCropArea" type="farm:AbstractCropAreaType" abstract="true" substitutionGroup="veg:PlantCover">
+        <xs:annotation><xs:documentation>Abstract feature for crop areas.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbstractCropAreaType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="veg:PlantCoverType">
+                <xs:sequence>
+                    <xs:element name="cropName" type="xs:string"/>
+                    <xs:element name="cropCode" type="gml:CodeType" minOccurs="0">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:fao:agrovoc:crop</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="plantingDate" type="xs:date" minOccurs="0"/>
+                    <xs:element name="cultivationSystem" type="xs:string" minOccurs="0"/>
+                    <xs:element name="producerType" type="farm:ProducerTypeValue" minOccurs="0"/> <xs:element name="contourPlanting" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="isIrrigated" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="irrigationSystemType" type="xs:string" minOccurs="0"/>
+                    <xs:element name="seedVarietyType" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="isGMO" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="expectedHarvestsPerCycle" type="xs:positiveInteger" minOccurs="0"/>
+                    <xs:element name="hasProductionContract" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="hasMarketingContract" type="xs:boolean" minOccurs="0"/>
+
+                    <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+                    <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
+
+                     <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+
+                    <xs:element name="producesLot" type="farm:HarvestedLotPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+
+                    <xs:element ref="farm:_GenericApplicationPropertyOfAbstractCropArea" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="AnnualCropArea" type="farm:AnnualCropAreaType" substitutionGroup="farm:_AbstractCropArea"/>
+    <xs:complexType name="AnnualCropAreaType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractCropAreaType">
+                <xs:sequence>
+                    <xs:element name="cropRotationInfo" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="PerennialCropArea" type="farm:PerennialCropAreaType" substitutionGroup="farm:_AbstractCropArea"/>
+    <xs:complexType name="PerennialCropAreaType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractCropAreaType">
+                <xs:sequence>
+                    <xs:element name="lastPruningDate" type="xs:date" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="HarvestedLot" type="farm:HarvestedLotType" substitutionGroup="core:AbstractFeature">
+         <xs:annotation><xs:documentation>Feature representing a harvested quantity of produce.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="HarvestedLotType">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="quantityHarvested" type="gml:MeasureType"/>
+                    <xs:element name="harvestDate" type="xs:date"/>
+                    <xs:element name="qualityGrade" type="xs:string" minOccurs="0"/>
+                    <xs:element name="quantitySold" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="averageSalePrice" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="totalSaleValue" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="quantityForOwnUse" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="quantityStored" type="gml:MeasureType" minOccurs="0"/>
+                    <xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
+                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+                    <xs:element ref="farm:_GenericApplicationPropertyOfHarvestedLot" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="InputUsedType">
+        <xs:sequence>
+            <xs:element name="inputType" type="gml:CodeType"/>
+            <xs:element name="productName" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantityApplied" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="applicationRate" type="gml:MeasureType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="StorageInfoType">
+        <xs:sequence>
+            <xs:element name="hasStorageAbility" type="xs:boolean"/>
+            <xs:element name="storageType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="isOnFarmStorage" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="isModernFacility" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HarvestedLotPropertyType">
+        <xs:sequence minOccurs="0">
+             <xs:element ref="farm:HarvestedLot"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:annotation><xs:appinfo>Package: farm-operations</xs:appinfo></xs:annotation>
+
+    <xs:element name="AgriculturalOperation" type="farm:AgriculturalOperationType" substitutionGroup="core:AbstractDynamizer">
+         <xs:annotation><xs:documentation>Dynamizer representing agricultural operations over time.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="AgriculturalOperationType">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractDynamizerType">
+                <xs:sequence>
+                    <xs:element name="operationType" type="gml:CodeType">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:operationtype</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="inputUsed" type="farm:InputUsedType" minOccurs="0"/>
+                    <xs:element name="areaAffected" type="gml:AreaType" minOccurs="0"/>
+                    <xs:element name="targetCropAreaRef" type="gml:ReferenceType" minOccurs="0"/> <xs:element name="targetPropertyRef" type="gml:ReferenceType" minOccurs="0"/> <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
+                    <xs:element ref="farm:_GenericApplicationPropertyOfAgriculturalOperation" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AgriculturalOperationPropertyType">
+        <xs:sequence minOccurs="0">
+             <xs:element ref="farm:AgriculturalOperation"/>
+        </xs:sequence>
+        <xs:attribute ref="xlink:href"/>
+        <xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </xs:complexType>
+
+
+    <xs:annotation><xs:appinfo>Package: farm-risk</xs:appinfo></xs:annotation>
+
+     <xs:complexType name="InsuranceRiskAssessmentType">
+        <xs:annotation>
+            <xs:documentation>ZARC NM data for insurance risk assessment.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="zarcScore" type="xs:integer" minOccurs="0"/>
+            <xs:element name="calculationDate" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="riskClassificationKey" type="xs:string" minOccurs="0"/>
+            <xs:element name="methodologyCode" type="gml:CodeType" minOccurs="0">
+                  <xs:annotation><xs:documentation>CodeSpace suggestion: urn:gov:br:mapa:zarc:methodology</xs:documentation></xs:annotation>
+             </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ZarcAnaliseSoloType">
+        <xs:sequence>
+            <xs:element name="collectionDate" type="xs:date"/>
+            <xs:element name="layerDepth" type="xs:string"/>
+            <xs:element name="sandContent" type="xs:double"/>
+            <xs:element name="clayContent" type="xs:double"/>
+            <xs:element name="siltContent" type="xs:double"/>
+            <xs:element name="pHinWater" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ZarcMonitoramentoSateliteType">
+        <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="satellite" type="xs:string"/>
+            <xs:element name="ndviValue" type="xs:float" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ZarcHistoricoCultivoType">
+        <xs:sequence>
+            <xs:element name="plantingDate" type="xs:date"/>
+            <xs:element name="harvestDate" type="xs:date"/>
+            <xs:element name="crop" type="xs:string"/>
+            <xs:element name="ilpUsed" type="xs:boolean"/>
+            <xs:element name="strawPercentage" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="insuranceRisk" type="farm:InsuranceRiskAssessmentType" substitutionGroup="core:_GenericApplicationPropertyOfRuralProperty"/>
+     <xs:element name="soilAnalysis" type="farm:ZarcAnaliseSoloType" substitutionGroup="farm:_GenericApplicationPropertyOfAbstractCropArea"/>
+     <xs:element name="satelliteMonitoring" type="farm:ZarcMonitoramentoSateliteType" substitutionGroup="farm:_GenericApplicationPropertyOfAbstractCropArea"/>
+     <xs:element name="cultivationHistory" type="farm:ZarcHistoricoCultivoType" substitutionGroup="farm:_GenericApplicationPropertyOfAbstractCropArea"/>
+
+
+    <xs:annotation><xs:appinfo>Package: farm-sustainability</xs:appinfo></xs:annotation>
+
+     <xs:complexType name="SustainabilityMetricsType">
+        <xs:sequence>
+             <xs:element name="carbonFootprint" type="gml:MeasureType" minOccurs="0"/>
+             <xs:element name="waterUsageEfficiency" type="xs:double" minOccurs="0"/>
+             <xs:element name="biodiversityIndex" type="xs:double" minOccurs="0"/>
+             <xs:element name="soilHealthIndicator" type="xs:string" minOccurs="0"/>
+             <xs:element name="bioinputUsageRate" type="xs:double" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TraceabilityInfoType">
+        <xs:sequence>
+            <xs:element name="lotID" type="xs:string"/>
+            <xs:element name="blockchainHash" type="xs:string" minOccurs="0"/>
+            <xs:element name="originPropertyRef" type="gml:ReferenceType" minOccurs="0"/>
+            <xs:element name="originAreaRef" type="gml:ReferenceType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="sustainability" type="farm:SustainabilityMetricsType" substitutionGroup="core:_GenericApplicationPropertyOfRuralProperty"/>
+    <xs:element name="traceabilityInfo" type="farm:TraceabilityInfoType" substitutionGroup="farm:_GenericApplicationPropertyOfHarvestedLot"/>
+
+
+     <xs:annotation><xs:appinfo>Package: farm-temporal</xs:appinfo></xs:annotation>
+
+    <xs:element name="_AbstractFarmTimeSlice" type="farm:AbstractFarmTimeSliceType" abstract="true" substitutionGroup="core:AbstractTimeSlice">
+        <xs:annotation><xs:documentation>Base class for FarmGML time slices.</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbstractFarmTimeSliceType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractTimeSliceType">
+                </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="CropAreaTimeSlice" type="farm:CropAreaTimeSliceType" substitutionGroup="farm:_AbstractFarmTimeSlice">
+        <xs:annotation><xs:documentation>Represents the state of a CropArea during a specific time period (e.g., a growing season).</xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:complexType name="CropAreaTimeSliceType">
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractFarmTimeSliceType">
+                <xs:sequence>
+                    <xs:element name="cropGrowthStage" type="gml:CodeType" minOccurs="0"/>
+                    <xs:element name="currentNDVI" type="xs:float" minOccurs="0"/>
+                    </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+     <xs:complexType name="RuralPropertyType"> <xs:complexContent>
+            <xs:extension base="farm:RuralPropertyType">
+                 <xs:sequence>
+                     <xs:element name="timeSlice" type="core:TimeSlicePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                 </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+     </xs:complexType>
+     <xs:complexType name="AbstractCropAreaType"> <xs:complexContent>
+            <xs:extension base="farm:AbstractCropAreaType">
+                 <xs:sequence>
+                     <xs:element name="timeSlice" type="core:TimeSlicePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                 </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+     </xs:complexType>
+     </xs:schema>
