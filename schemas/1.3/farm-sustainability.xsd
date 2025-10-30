@@ -33,6 +33,6 @@
         
 
     <xs:element name="sustainability" type="farm:SustainabilityMetricsType" substitutionGroup="farm:_GenericApplicationPropertyOfRuralProperty"/>
-    <xs:element name="traceabilityInfo" type="farm:TraceabilityInfoType" substitutionGroup="farm:_GenericApplicationPropertyOfHarvestedLot"/>
+
 
 </xs:schema>

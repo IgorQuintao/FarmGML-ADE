@@ -30,19 +30,11 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="HarvestedLotType" abstract="true">
-        <xs:complexContent>
-            <xs:extension base="core:AbstractFeatureWithLifespanType">
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="core:AbstractFeatureWithLifespanType" substitutionGroup="core:AbstractFeature"/>
 
     <xs:complexType name="_ADEOfLandUseType">
         <xs:annotation>
@@ -55,6 +47,8 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:element name="_ADEOfLandUse" type="farm:_ADEOfLandUseType" abstract="true" substitutionGroup="core:ADEOfAbstractSpace"/>
+    
+
+
 
 </xs:schema>
