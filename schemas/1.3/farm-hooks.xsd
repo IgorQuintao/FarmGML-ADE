@@ -24,17 +24,28 @@
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
     <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
 
+    <xs:complexType name="AbstractFarmGenericAttributeType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="core:AbstractGenericAttributeType"/>
+        </xs:complexContent>
+    </xs:complexType>
 
-    <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
-    
+    <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+
     <xs:complexType name="_ADEOfLandUseType">
         <xs:annotation>
             <xs:documentation>Conceptual hook for LandUse extensions.</xs:documentation>
         </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="core:ADEOfAbstractSpaceType">
+                <xs:sequence>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:element name="_ADEOfLandUse" type="farm:_ADEOfLandUseType" abstract="true" substitutionGroup="core:ADEOfAbstractSpace"/>
 

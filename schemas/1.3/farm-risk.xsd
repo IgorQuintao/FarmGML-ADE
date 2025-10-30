@@ -12,6 +12,8 @@
     <xs:import namespace="http://www.opengis.net/citygml/generics/3.0" schemaLocation="../ogc/citygml/3.0/generics.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/>
 
+    <xs:include schemaLocation="farm-hooks.xsd"/>
+
     <xs:annotation><xs:appinfo>Package: farm-risk</xs:appinfo></xs:annotation>
     
     <xs:element name="insuranceRisk" type="farm:InsuranceRiskAssessmentType" substitutionGroup="farm:_GenericApplicationPropertyOfRuralProperty"/>
@@ -20,43 +22,59 @@
     <xs:element name="cultivationHistory" type="farm:ZarcHistoricoCultivoType" substitutionGroup="farm:_GenericApplicationPropertyOfAbstractCropArea"/>
 
      <xs:complexType name="InsuranceRiskAssessmentType">
-        <xs:annotation>
-            <xs:documentation>ZARC NM data for insurance risk assessment.</xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="zarcScore" type="xs:integer" minOccurs="0"/>
-            <xs:element name="calculationDate" type="xs:dateTime" minOccurs="0"/>
-            <xs:element name="riskClassificationKey" type="xs:string" minOccurs="0"/>
-            <xs:element name="methodologyCode" type="gml:CodeType" minOccurs="0">
-                 <xs:annotation><xs:documentation>CodeSpace suggestion: urn:gov:br:mapa:zarc:methodology</xs:documentation></xs:annotation>
-             </xs:element>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractFarmGenericAttributeType">
+                <xs:sequence>
+                    <xs:element name="zarcScore" type="xs:integer" minOccurs="0"/>
+                    <xs:element name="calculationDate" type="xs:dateTime" minOccurs="0"/>
+                    <xs:element name="riskClassificationKey" type="xs:string" minOccurs="0"/>
+                    <xs:element name="methodologyCode" type="gml:CodeType" minOccurs="0">
+                         <xs:annotation><xs:documentation>CodeSpace suggestion: urn:gov:br:mapa:zarc:methodology</xs:documentation></xs:annotation>
+                     </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
+
     <xs:complexType name="ZarcAnaliseSoloType">
-        <xs:sequence>
-            <xs:element name="collectionDate" type="xs:date"/>
-            <xs:element name="layerDepth" type="xs:string"/>
-            <xs:element name="sandContent" type="xs:double"/>
-            <xs:element name="clayContent" type="xs:double"/>
-            <xs:element name="siltContent" type="xs:double"/>
-            <xs:element name="pHinWater" type="xs:double"/>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractFarmGenericAttributeType">
+                <xs:sequence>
+                    <xs:element name="collectionDate" type="xs:date"/>
+                    <xs:element name="layerDepth" type="xs:string"/>
+                    <xs:element name="sandContent" type="xs:double"/>
+                    <xs:element name="clayContent" type="xs:double"/>
+                    <xs:element name="siltContent" type="xs:double"/>
+                    <xs:element name="pHinWater" type="xs:double"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
+
     <xs:complexType name="ZarcMonitoramentoSateliteType">
-        <xs:sequence>
-            <xs:element name="date" type="xs:date"/>
-            <xs:element name="satellite" type="xs:string"/>
-            <xs:element name="ndviValue" type="xs:float" minOccurs="0"/>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractFarmGenericAttributeType">
+                <xs:sequence>
+                    <xs:element name="date" type="xs:date"/>
+                    <xs:element name="satellite" type="xs:string"/>
+                    <xs:element name="ndviValue" type="xs:float" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
+
     <xs:complexType name="ZarcHistoricoCultivoType">
-        <xs:sequence>
-            <xs:element name="plantingDate" type="xs:date"/>
-            <xs:element name="harvestDate" type="xs:date"/>
-            <xs:element name="crop" type="xs:string"/>
-            <xs:element name="ilpUsed" type="xs:boolean"/>
-            <xs:element name="strawPercentage" type="xs:integer"/>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="farm:AbstractFarmGenericAttributeType">
+                <xs:sequence>
+                    <xs:element name="plantingDate" type="xs:date"/>
+                    <xs:element name="harvestDate" type="xs:date"/>
+                    <xs:element name="crop" type="xs:string"/>
+                    <xs:element name="ilpUsed" type="xs:boolean"/>
+                    <xs:element name="strawPercentage" type="xs:integer"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
 </xs:schema>
