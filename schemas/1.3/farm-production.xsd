@@ -8,18 +8,13 @@
     targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
-    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/core.xsd C:/Users/Usuario/Documents/GitHub/FarmGML-ADE/schemas/ogc/citygml/3.0/cityGMLBase.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/building.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="https://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd"/>
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/> 
+    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="../ogc/citygml/3.0/core.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="../ogc/citygml/3.0/vegetation.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/>
 
     <xs:annotation><xs:appinfo>Package: farm-production</xs:appinfo></xs:annotation>
 
-    <xs:element name="_AbstractCropArea" type="farm:AbstractCropAreaType" abstract="true" substitutionGroup="veg:PlantCover">
-        <xs:annotation><xs:documentation>Abstract feature for crop areas.</xs:documentation></xs:annotation>
-    </xs:element>
+    <xs:element name="_AbstractCropArea" type="farm:AbstractCropAreaType" abstract="true" substitutionGroup="veg:PlantCover"/>
     <xs:complexType name="AbstractCropAreaType" abstract="true">
         <xs:complexContent>
             <xs:extension base="veg:PlantCoverType">
@@ -38,14 +33,9 @@
                     <xs:element name="expectedHarvestsPerCycle" type="xs:positiveInteger" minOccurs="0"/>
                     <xs:element name="hasProductionContract" type="xs:boolean" minOccurs="0"/>
                     <xs:element name="hasMarketingContract" type="xs:boolean" minOccurs="0"/>
-
                     <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
                     <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
-
-                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
-
                     <xs:element name="producesLot" type="farm:HarvestedLotPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-
                     <xs:element ref="farm:_GenericApplicationPropertyOfAbstractCropArea" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
@@ -74,13 +64,10 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="HarvestedLot" type="farm:HarvestedLotType" substitutionGroup="core:AbstractFeature">
-         <xs:annotation><xs:documentation>Feature representing a harvested quantity of produce.</xs:documentation></xs:annotation>
-    </xs:element>
+    <xs:element name="HarvestedLot" type="farm:HarvestedLotType" substitutionGroup="core:AbstractFeature"/>
     <xs:complexType name="HarvestedLotType">
         <xs:complexContent>
-            <xs:extension base="core:AbstractFeatureType">
-                <xs:sequence>
+            <xs:extension base="core:AbstractFeatureWithLifespanType"> <xs:sequence>
                     <xs:element name="quantityHarvested" type="gml:MeasureType"/>
                     <xs:element name="harvestDate" type="xs:date"/>
                     <xs:element name="qualityGrade" type="xs:string" minOccurs="0"/>
@@ -90,16 +77,15 @@
                     <xs:element name="quantityForOwnUse" type="gml:MeasureType" minOccurs="0"/>
                     <xs:element name="quantityStored" type="gml:MeasureType" minOccurs="0"/>
                     <xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="0"/>
-                    <xs:element ref="core:lifecycleInfo" minOccurs="0"/>
                     <xs:element ref="farm:_GenericApplicationPropertyOfHarvestedLot" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-
+    
     <xs:complexType name="InputUsedType">
         <xs:sequence>
-            <xs:element name="inputType" type="gml:CodeType"/>
+             <xs:element name="inputType" type="gml:CodeType"/>
             <xs:element name="productName" type="xs:string" minOccurs="0"/>
             <xs:element name="quantityApplied" type="gml:MeasureType" minOccurs="0"/>
             <xs:element name="applicationRate" type="gml:MeasureType" minOccurs="0"/>
