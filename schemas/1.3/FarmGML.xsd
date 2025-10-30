@@ -9,37 +9,24 @@
     xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
     xmlns:gen="http://www.opengis.net/citygml/generics/3.0"   
     xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0"
+    xmlns:vers="http://www.opengis.net/citygml/versioning/3.0"
     xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
     <xs:annotation>
-        <xs:documentation xml:lang="en">
-            FarmGML Application Domain Extension (ADE) for CityGML 3.0
-            Version: 1.3
-            Date: 2025-10-25
-            Description: Extends CityGML 3.0 for the agri-food value chain. Incorporates FAO's Farm Typology (via AGRIS), AgrIMAF farm-to-fork scope, ZARC NM risk assessment, and Brazilian Digital Agro Strategy insights. This version refactors the structure into packages, enhances CityGML compliance (Hooks, Generics), clarifies semantics (English terms, external CodeLists), adds explicit geometry and temporal elements (TimeSlice, Lifecycle).
-        </xs:documentation>
-        <xs:documentation xml:lang="pt-br">
-            Extensão de Domínio de Aplicação (ADE) FarmGML para CityGML 3.0
-            Versão: 1.3 
-            Data: 2025-10-25
-            Descrição: Estende CityGML 3.0 para a cadeia de valor agroalimentar. Incorpora a Tipologia de Fazendas da FAO (via AGRIS), escopo farm-to-fork AgrIMAF, avaliação de risco ZARC NM e insights da Estratégia Agrodigital Brasileira. Esta versão refatora a estrutura em pacotes, melhora a conformidade com CityGML (Hooks, Genéricos), clarifica a semântica (termos em inglês, CodeLists externas), adiciona geometria explícita e elementos temporais (TimeSlice, Lifecycle).
-        </xs:documentation>
-        <xs:appinfo source="urn:ogc:def:appinfo:external-codelist">
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/BuildingType.xml
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/codelists/CropGrowthStage.xml
-        </xs:appinfo>
-    </xs:annotation>
+        </xs:annotation>
 
-    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="http://schemas.opengis.net/citygml/3.0/core.xsd C:/Users/Usuario/Documents/GitHub/FarmGML-ADE/schemas/ogc/citygml/3.0/cityGMLBase.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="https://schemas.opengis.net/citygml/vegetation/3.0/vegetation.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/landUse.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/building.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/generics/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/generics.xsd"/> 
-    <xs:import namespace="http://www.opengis.net/citygml/dynamizer/3.0" schemaLocation="https://schemas.opengis.net/citygml/landuse/3.0/dynamizer.xsd"/>
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/> 
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="../ogc/citygml/3.0/core.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="../ogc/citygml/3.0/vegetation.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="../ogc/citygml/3.0/landUse.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="../ogc/citygml/3.0/building.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/generics/3.0" schemaLocation="../ogc/citygml/3.0/generics.xsd"/> 
+    <xs:import namespace="http://www.opengis.net/citygml/dynamizer/3.0" schemaLocation="../ogc/citygml/3.0/dynamizer.xsd"/>
+    <xs:import namespace="http://www.opengis.net/citygml/versioning/3.0" schemaLocation="../ogc/citygml/3.0/versioning.xsd"/>
+
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
+    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
 
     <xs:include schemaLocation="farm-hooks.xsd"/>
     <xs:include schemaLocation="farm-core.xsd"/>
@@ -51,3 +38,4 @@
     <xs:include schemaLocation="farm-temporal.xsd"/>
 
 </xs:schema>
+
