@@ -2,78 +2,29 @@
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:core="http://www.opengis.net/citygml/3.0"
-    xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
-    xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
     xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
-    xmlns:gen="http://www.opengis.net/citygml/generics/3.0"   
-    xmlns:dyn="http://www.opengis.net/citygml/dynamizer/3.0"
-    xmlns:vers="http://www.opengis.net/citygml/versioning/3.0"
     xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     targetNamespace="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     elementFormDefault="qualified">
 
     <xs:import namespace="http://www.opengis.net/citygml/3.0" schemaLocation="../ogc/citygml/3.0/core.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="../ogc/citygml/3.0/vegetation.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/landuse/3.0" schemaLocation="../ogc/citygml/3.0/landUse.xsd"/>
     <xs:import namespace="http://www.opengis.net/citygml/building/3.0" schemaLocation="../ogc/citygml/3.0/building.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/generics/3.0" schemaLocation="../ogc/citygml/3.0/generics.xsd"/> 
-    <xs:import namespace="http://www.opengis.net/citygml/dynamizer/3.0" schemaLocation="../ogc/citygml/3.0/dynamizer.xsd"/>
-    <xs:import namespace="http://www.opengis.net/citygml/versioning/3.0" schemaLocation="../ogc/citygml/3.0/versioning.xsd"/>
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/>
 
-    <xs:include schemaLocation="farm-types.xsd"/>
-    <xs:include schemaLocation="farm-hooks.xsd"/>
-    <xs:include schemaLocation="farm-enterprise.xsd"/>
-    <xs:include schemaLocation="farm-operations.xsd"/>
-
-    <xs:annotation><xs:appinfo>Package: farm-core</xs:appinfo></xs:annotation>
-
-    <xs:element name="RuralProperty" type="farm:RuralPropertyType" substitutionGroup="luse:LandUse"/>
-    <xs:complexType name="RuralPropertyType">
+    <xs:complexType name="FarmBuildingPropertiesType">
         <xs:complexContent>
-            <xs:extension base="luse:LandUseType">
+            <xs:extension base="bldg:ADEOfBuildingType">
                 <xs:sequence>
-                    <xs:element name="name" type="xs:string" minOccurs="0"/>
-                    <xs:element name="holderID" type="xs:string" minOccurs="0" />
-                    <xs:element name="managerInfo" type="farm:PersonInfoType" minOccurs="0" />
-                    <xs:element name="carCode" type="xs:string" minOccurs="0"/>
-                    <xs:element name="ibgeCode" type="xs:string" minOccurs="0"/>
-                    <xs:element name="officialID" type="xs:string" minOccurs="0" />
-                    <xs:element name="lastCensusID" type="xs:string" minOccurs="0" />
-                    <xs:element name="mainLocationType" type="gml:CodeType" minOccurs="0"/>
-                    <xs:element name="landTenureType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="keepsRecords" type="xs:boolean" minOccurs="0"/>
-                    <xs:element name="mainAgriculturalFocus" type="farm:CommoditySpecializationValue" minOccurs="0"/>
-                    <xs:element name="farmProfile" type="farm:FarmProfileType" minOccurs="0"/>
-                    <xs:element name="farmSize" type="farm:FarmSizeType" minOccurs="0"/>
-                    <xs:element name="commoditySpecializationCalculated" type="farm:CommoditySpecializationValue" minOccurs="0"/>
-                    <xs:element name="diversification" type="farm:DiversificationType" minOccurs="0"/>
-                    <xs:element name="householdInfo" type="farm:HouseholdInfoType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="labourInput" type="farm:LabourInputType" minOccurs="0"/>
-                    <xs:element name="mainMarketAccessTime" type="xs:duration" minOccurs="0"/>
-                    <xs:element name="enterprise" type="farm:RuralEnterprisePropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="operation" type="farm:AgriculturalOperationPropertyType" minOccurs="0" maxOccurs="unbounded"/> 
-                    <xs:element name="lod0Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
-                    <xs:element name="lod1Geometry" type="gml:SurfacePropertyType" minOccurs="0"/>
-                    <xs:element ref="farm:_GenericApplicationPropertyOfRuralProperty" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="buildingType" type="gml:CodeType" minOccurs="0">
+                        <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:buildingtype</xs:documentation></xs:annotation>
+                    </xs:element>
+                    <xs:element name="purpose" type="xs:string" minOccurs="0"/>
+                    <xs:element name="constructionYear" type="xs:gYear" minOccurs="0"/>
+                    <xs:element name="associatedEnterpriseRef" type="gml:ReferenceType" minOccurs="0"/> 
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
-    </xs:complexType>
-
-    <xs:element name="adeOfBuilding" type="farm:FarmBuildingPropertiesType" substitutionGroup="bldg:ADEOfBuilding"/>
-    <xs:complexType name="FarmBuildingPropertiesType">
-        <xs:sequence>
-            <xs:element name="buildingType" type="gml:CodeType" minOccurs="0">
-                <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:buildingtype</xs:documentation></xs:annotation>
-            </xs:element>
-            <xs:element name="purpose" type="xs:string" minOccurs="0"/>
-            <xs:element name="constructionYear" type="xs:gYear" minOccurs="0"/>
-            <xs:element name="associatedEnterpriseRef" type="gml:ReferenceType" minOccurs="0"/> 
-        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="PersonInfoType">
@@ -178,5 +129,22 @@
             <xs:enumeration value="occupant"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:complexType name="InputUsedType">
+        <xs:sequence>
+             <xs:element name="inputType" type="gml:CodeType"/>
+            <xs:element name="productName" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantityApplied" type="gml:MeasureType" minOccurs="0"/>
+            <xs:element name="applicationRate" type="gml:MeasureType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+     <xs:complexType name="StorageInfoType">
+        <xs:sequence>
+            <xs:element name="hasStorageAbility" type="xs:boolean"/>
+            <xs:element name="storageType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="isOnFarmStorage" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="isModernFacility" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>
