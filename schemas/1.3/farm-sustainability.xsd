@@ -22,6 +22,16 @@
                 </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    <xs:complexType name="TraceabilityInfoType">
+            <xs:sequence>
+                <xs:element name="lotID" type="xs:string"/>
+                <xs:element name="blockchainHash" type="xs:string" minOccurs="0"/>
+                <xs:element name="originPropertyRef" type="gml:ReferenceType" minOccurs="0"/>
+                <xs:element name="originAreaRef" type="gml:ReferenceType" minOccurs="0"/>
+            </xs:sequence>
+    </xs:complexType>
+        
+
     <xs:element name="sustainability" type="farm:SustainabilityMetricsType" substitutionGroup="farm:_GenericApplicationPropertyOfRuralProperty"/>
     <xs:element name="traceabilityInfo" type="farm:TraceabilityInfoType" substitutionGroup="farm:_GenericApplicationPropertyOfHarvestedLot"/>
 
