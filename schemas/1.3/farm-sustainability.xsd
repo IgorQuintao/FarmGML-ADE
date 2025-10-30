@@ -16,33 +16,12 @@
 
     <xs:annotation><xs:appinfo>Package: farm-sustainability</xs:appinfo></xs:annotation>
 
-     <xs:complexType name="SustainabilityMetricsType">
+    <xs:complexType name="SustainabilityMetricsType">
         <xs:complexContent>
             <xs:extension base="farm:AbstractFarmGenericAttributeType">
-                <xs:sequence>
-                     <xs:element name="carbonFootprint" type="gml:MeasureType" minOccurs="0"/>
-                     <xs:element name="waterUsageEfficiency" type="xs:double" minOccurs="0"/>
-                     <xs:element name="biodiversityIndex" type="xs:double" minOccurs="0"/>
-                     <xs:element name="soilHealthIndicator" type="xs:string" minOccurs="0"/>
-                     <xs:element name="bioinputUsageRate" type="xs:double" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
+                </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
-    <xs:complexType name="TraceabilityInfoType">
-        <xs:complexContent>
-            <xs:extension base="farm:AbstractFarmGenericAttributeType">
-                <xs:sequence>
-                    <xs:element name="lotID" type="xs:string"/>
-                    <xs:element name="blockchainHash" type="xs:string" minOccurs="0"/>
-                    <xs:element name="originPropertyRef" type="gml:ReferenceType" minOccurs="0"/>
-                    <xs:element name="originAreaRef" type="gml:ReferenceType" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:element name="sustainability" type="farm:SustainabilityMetricsType" substitutionGroup="farm:_GenericApplicationPropertyOfRuralProperty"/>
     <xs:element name="traceabilityInfo" type="farm:TraceabilityInfoType" substitutionGroup="farm:_GenericApplicationPropertyOfHarvestedLot"/>
 

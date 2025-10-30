@@ -12,7 +12,6 @@
     <xs:import namespace="http://www.opengis.net/citygml/vegetation/3.0" schemaLocation="../ogc/citygml/3.0/vegetation.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/>
 
-    <xs:include schemaLocation="farm-types.xsd"/>
     <xs:include schemaLocation="farm-hooks.xsd"/>
 
     <xs:annotation><xs:appinfo>Package: farm-production</xs:appinfo></xs:annotation>
