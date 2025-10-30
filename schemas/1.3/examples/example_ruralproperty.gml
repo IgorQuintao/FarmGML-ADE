@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:CityModel
+<farm:RuralProperty
     xmlns:core="http://www.opengis.net/citygml/3.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
@@ -7,8 +7,8 @@
     xmlns:veg="http://www.opengis.net/citygml/vegetation/3.0"
     xmlns:farm="https://igorquintao.github.io/FarmGML-ADE/schemas/1.3"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation=
-     "http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
+    xsi:schemaLocation="
+      http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
       https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/FarmGML.xsd 
       https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-core.xsd
       https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/farm-hooks.xsd
@@ -17,8 +17,7 @@
       http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd"
     gml:id="FarmModel_001">
 
-  <core:cityObjectMember>
-    <farm:RuralProperty gml:id="farm_RP_001">
+  <farm:RuralProperty gml:id="farm_RP_001">
       <gml:name>Fazenda Modelo 2025</gml:name>
       <farm:holderID>CPF-12345678900</farm:holderID>
       <farm:officialID>INCRA-88990077</farm:officialID>
@@ -104,7 +103,5 @@
         </farm:sustainability>
       </core:genericApplicationPropertyOfRuralProperty>
 
-    </farm:RuralProperty>
-  </core:cityObjectMember>
-
-</core:CityModel>
+  </farm:RuralProperty>
+</farm:RuralProperty>

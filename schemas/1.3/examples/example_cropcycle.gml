@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:CityModel
+<farm:RuralProperty
     xmlns:core="http://www.opengis.net/citygml/3.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:luse="http://www.opengis.net/citygml/landuse/3.0"
@@ -13,8 +13,9 @@
       http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
       http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd"
     gml:id="FarmModel_CropCycle_2025">
+</farm:RuralProperty>
 
-  <core:cityObjectMember>
+  <farm:RuralProperty>
     <farm:RuralProperty gml:id="farm_RP_002">
       <gml:name>Fazenda Boa Safra</gml:name>
       <farm:holderID>CPF-98765432100</farm:holderID>
@@ -127,6 +128,6 @@
 
       </farm:cropArea>
     </farm:RuralProperty>
-  </core:cityObjectMember>
+  </farm:RuralProperty>
 
-</core:CityModel>
+</farm:RuralProperty>
