@@ -23,7 +23,9 @@
     <xs:import namespace="http://www.opengis.net/citygml/versioning/3.0" schemaLocation="../ogc/citygml/3.0/versioning.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
     <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
-    
+
+    <xs:include schemaLocation="farm-hooks.xsd"/>
+
     <xs:annotation><xs:appinfo>Package: farm-temporal</xs:appinfo></xs:annotation>
 
     <xs:element name="_AbstractFarmTimeSlice" type="farm:AbstractFarmTimeSliceType" abstract="true" substitutionGroup="core:AbstractVersion"/>

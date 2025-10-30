@@ -24,6 +24,8 @@
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
     <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
 
+    <xs:include schemaLocation="farm-hooks.xsd"/>
+
     <xs:annotation><xs:appinfo>Package: farm-operations</xs:appinfo></xs:annotation>
 
     <xs:element name="AgriculturalOperation" type="farm:AgriculturalOperationType" substitutionGroup="core:AbstractDynamizer"/>
