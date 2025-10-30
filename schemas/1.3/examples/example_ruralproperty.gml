@@ -86,22 +86,22 @@
         </farm:AnnualCropArea>
       </farm:cropArea>
 
-      <core:genericApplicationPropertyOfRuralProperty>
-        <farm:insuranceRisk>
-            <farm:zarcScore>78</farm:zarcScore>
-            <farm:calculationDate>2025-10-20T00:00:00Z</farm:calculationDate>
-            <farm:riskClassificationKey>ZARC2025_MG_SOY</farm:riskClassificationKey>
-        </farm:insuranceRisk>
-      </core:genericApplicationPropertyOfRuralProperty>
+                  <core:genericAttribute>
+                <farm:insuranceRisk>
+                    <farm:zarcScore>78</farm:zarcScore>
+                    <farm:calculationDate>2025-10-20T00:00:00Z</farm:calculationDate>
+                    <farm:riskClassificationKey>ZARC2025_MG_SOY</farm:riskClassificationKey>
+                </farm:insuranceRisk>
+            </core:genericAttribute>
 
-      <core:genericApplicationPropertyOfRuralProperty>
-        <farm:sustainability>
-            <farm:carbonFootprint uom="kgCO2e/ha">950.0</farm:carbonFootprint>
-            <farm:waterUsageEfficiency>0.78</farm:waterUsageEfficiency>
-            <farm:biodiversityIndex>0.65</farm:biodiversityIndex>
-            <farm:bioinputUsageRate>0.45</farm:bioinputUsageRate>
-        </farm:sustainability>
-      </core:genericApplicationPropertyOfRuralProperty>
+            <core:genericAttribute>
+                <farm:sustainability>
+                    <farm:carbonFootprint uom="kgCO2e/ha">950.0</farm:carbonFootprint>
+                    <farm:waterUsageEfficiency>0.78</farm:waterUsageEfficiency>
+                    <farm:biodiversityIndex>0.65</farm:biodiversityIndex>
+                    <farm:bioinputUsageRate>0.45</farm:bioinputUsageRate>
+                </farm:sustainability>
+            </core:genericAttribute>
 
   </farm:RuralProperty>
 </farm:RuralProperty>
