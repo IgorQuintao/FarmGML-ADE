@@ -25,11 +25,11 @@
     <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
 
 
-    <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="xs:anyType" abstract="true" substitutionGroup="gen:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="xs:anyType" abstract="true" substitutionGroup="gen:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="xs:anyType" abstract="true" substitutionGroup="gen:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="xs:anyType" abstract="true" substitutionGroup="gen:AbstractGenericAttribute"/>
-    <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="xs:anyType" abstract="true" substitutionGroup="gen:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfRuralProperty" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractCropArea" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="xs:anyType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     
     <xs:complexType name="_ADEOfLandUseType">
         <xs:annotation>

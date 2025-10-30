@@ -26,10 +26,10 @@
     
     <xs:annotation><xs:appinfo>Package: farm-temporal</xs:appinfo></xs:annotation>
 
-    <xs:element name="_AbstractFarmTimeSlice" type="farm:AbstractFarmTimeSliceType" abstract="true" substitutionGroup="vers:AbstractVersion"/>
+    <xs:element name="_AbstractFarmTimeSlice" type="farm:AbstractFarmTimeSliceType" abstract="true" substitutionGroup="core:AbstractVersion"/>
     <xs:complexType name="AbstractFarmTimeSliceType" abstract="true">
         <xs:complexContent>
-            <xs:extension base="vers:AbstractVersionType">
+            <xs:extension base="core:AbstractVersionType">
              </xs:extension>
         </xs:complexContent>
     </xs:complexType>
