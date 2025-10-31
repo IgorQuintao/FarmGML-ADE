@@ -6,8 +6,6 @@
 ![Version](https://img.shields.io/badge/version-1.3-blue)
 ![Validation](https://img.shields.io/badge/validation-OK-brightgreen)
 
-The FarmGML Application Domain Extension (ADE) for CityGML 3.0, focused on the representation of rural properties and the agri-food value chain.
-
 ---
 
 **FarmGML** is an *Application Domain Extension (ADE)* of **CityGML 3.0**, designed to represent **rural enterprises, agricultural activities, and agro-environmental data** consistent with digital twin semantics.
@@ -21,6 +19,39 @@ It extends CityGML classes (such as `LandUse`, `Vegetation`, and `Building`) to 
 - Integration with geospatial and remote-sensing data  
 
 FarmGML enables integration between **3D city models**, **agricultural information systems**, **QGIS**, **3DCityDB**, and **CesiumJS** for **digital twins of rural areas**.
+
+---
+
+## Table of Contents
+* [About the Project](#about-the-project)
+* [Modeled Features](#modeled-features)
+* [Repository Structure](#-repository-structure)
+* [Usage Instructions](#-usage-instructions)
+    * [1. Setup for Offline Validation](#1-setup-for-offline-validation)
+    * [2. How to Use the Schema in your GML](#2-how-to-use-the-schema-in-your-gml)
+    * [3. How to Validate your GML Files](#3-how-to-validate-your-gml-files)
+* [Loading Examples](#-loading-examples)
+    * [QGIS](#qgis)
+    * [3DCityDB](#3dcitydb)
+* [License](#-license)
+* [Contact](#-contact)
+
+---
+
+## About the Project
+The FarmGML ADE extends CityGML 3.0 to represent agricultural holdings (farms), crop areas, rural enterprises (livestock, aquaculture), agricultural operations, risk assessments (ZARC NM), and sustainability metrics.
+
+This project follows the Model-Driven UML-to-XSD methodology and complies with the OGC CityGML 3.0 ADE design rules.
+
+## Modeled Features
+FarmGML is divided into modules, including:
+
+* **Core (`farm-core.xsd`):** Defines the main `RuralProperty` feature (based on `luse:LandUse`) and basic data types (Person, Household, Farm Profile).
+* **Enterprise (`farm-enterprise.xsd`):** Models different enterprises such as `LivestockEnterprise`, `AquacultureEnterprise`, and `ForestryEnterprise`.
+* **Production (`farm-production.xsd`):** Defines `AnnualCropArea`, `PerennialCropArea` (based on `veg:PlantCover`), and `HarvestedLot`.
+* **Operations (`farm-operations.xsd`):** Models events over time (e.g., planting, harvesting) using `AgriculturalOperation` (based on `dyn:AbstractDynamizer`).
+* **Risk & Sustainability (`farm-risk.xsd`, `farm-sustainability.xsd`):** Adds generic attributes for Risk (ZARC) and sustainability metrics (carbon footprint, etc.) via the `core:genericAttribute` hook.
+* **Temporal (`farm-temporal.xsd`):** Enables TimeSlices for features (based on `vers:AbstractVersion`).
 
 ---
 
