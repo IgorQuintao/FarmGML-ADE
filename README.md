@@ -153,7 +153,7 @@ FarmGML-ADE/
 
 ## First Validation and Conformance
 
-Validation was performed using `xmlschema 2.5.1` and `Python 3.11` via the script below:
+Validation was performed using `xmlschema 2.5.1` and `Python 3.11` via the script **`tools/validation/validate_farmgml.py`** below:
 ```bash
 import xmlschema
 from pathlib import Path
@@ -176,6 +176,7 @@ for gml in EXAMPLES_DIR.glob("*.gml"):
 ---
 
 ## ✅ Validation Results
+**`tools/validation/validate_report.html`**
 | **GML File**                       | **Status** |
 | ------------------------------ | :----: |
 | example_cropcycle.gml          |  ✅ OK  |
