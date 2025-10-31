@@ -1,8 +1,12 @@
-# FarmGML-ADE 🚜
-**Agricultural Domain**
+# FarmGML ADE 🚜
+**Application Domain Extension**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![OGC Standard](https://img.shields.io/badge/OGC-CityGML%203.0-blue.svg)](https://www.ogc.org/standard/citygml/)
+![Version](https://img.shields.io/badge/version-1.3-blue)
+![Validation](https://img.shields.io/badge/validation-OK-brightgreen)
+
+The FarmGML Application Domain Extension (ADE) for CityGML 3.0, focused on the representation of rural properties and the agri-food value chain.
 
 ---
 
