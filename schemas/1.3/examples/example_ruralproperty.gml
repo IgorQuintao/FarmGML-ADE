@@ -72,29 +72,27 @@
             <farm:lod0Geometry>
                 <gml:Polygon gml:id="geom_soy_2025" srsName="urn:ogc:def:crs:EPSG::31983">
                     <gml:exterior>
-                        <gml:LinearRing gml:id="lr_soy_2025">
+                        <gml:LinearRing>
                             <gml:posList>
-                                721128.11 7702296.04 0
-                                721128.117701296.04 0
-                                722128.11 7701296.04 0
-                                722128.11 7702296.04 0
-                                721128.11 7702296.04 0
+                    721128.1164901648	7702296.049924363	0
+                    721128.1164901648	7701296.049924363	0
+                    722128.1164901648	7701296.049924363	0
+                    722128.1164901648	7702296.049924363	0
+                    721128.1164901648	7702296.049924363	0
                             </gml:posList>
                         </gml:LinearRing>
                     </gml:exterior>
                 </gml:Polygon>
             </farm:lod0Geometry>
+
             <farm:producesLot>
                 <farm:HarvestedLot gml:id="harvest_2025_001">
                     <farm:quantityHarvested uom="t">145.0</farm:quantityHarvested>
                     <farm:harvestDate>2026-03-10</farm:harvestDate>
                     <farm:quantitySold uom="t">120.0</farm:quantitySold>
-                    <farm:traceabilityInfo>
-                        <farm:lotID>SOY-2025-001</farm:lotID>
-                        <farm:blockchainHash>0xAF23BEE197C9D0FA91</farm:blockchainHash>
-                    </farm:traceabilityInfo>
                 </farm:HarvestedLot>
             </farm:producesLot>
+
         </farm:AnnualCropArea>
     </gml:featureMember>
 
