@@ -28,13 +28,15 @@
         <farm:RuralProperty gml:id="farm_RP_001">
             <gml:name>Fazenda Modelo 2025</gml:name>
             <farm:holderID>CPF-12345678900</farm:holderID>
-            <farm:officialID>INCRA-88990077</farm:officialID>
             <farm:ibgeCode>3145007</farm:ibgeCode>
+            <farm:officialID>INCRA-88990077</farm:officialID>
             <farm:keepsRecords>true</farm:keepsRecords>
+
             <farm:farmProfile>
                 <farm:legalStatus>juridicalPerson</farm:legalStatus>
                 <farm:marketIntegration>mainlyForSale</farm:marketIntegration>
             </farm:farmProfile>
+
             <farm:farmSize>
                 <farm:physicalSizeAAU uom="ha">50.0</farm:physicalSizeAAU>
                 <farm:economicSize>
@@ -44,21 +46,12 @@
                 </farm:economicSize>
             </farm:farmSize>
             
-            <core:genericAttribute>
                 <farm:insuranceRisk>
                     <farm:zarcScore>78</farm:zarcScore>
                     <farm:calculationDate>2025-10-20T00:00:00Z</farm:calculationDate>
                     <farm:riskClassificationKey>ZARC2025_MG_SOY</farm:riskClassificationKey>
                 </farm:insuranceRisk>
-            </core:genericAttribute>
-            <core:genericAttribute>
-                <farm:sustainability>
-                    <farm:carbonFootprint uom="kgCO2e/ha">950.0</farm:carbonFootprint>
-                    <farm:waterUsageEfficiency>0.78</farm:waterUsageEfficiency>
-                    <farm:biodiversityIndex>0.65</farm:biodiversityIndex>
-                    <farm:bioinputUsageRate>0.45</farm:bioinputUsageRate>
-                </farm:sustainability>
-            </core:genericAttribute>
+
         </farm:RuralProperty>
     </gml:featureMember>
     
