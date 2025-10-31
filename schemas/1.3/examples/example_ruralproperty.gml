@@ -12,7 +12,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     
     xsi:schemaLocation="
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 ../FarmGML.xsd
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 C:\Users\Usuario\Documents\GitHub\FarmGML-ADE\schemas\1.3\FarmGML.xsd
         http://www.opengis.net/citygml/3.0 ../../ogc/citygml/3.0/core.xsd
         http://www.opengis.net/citygml/landuse/3.0 ../../ogc/citygml/3.0/landUse.xsd
         http://www.opengis.net/citygml/vegetation/3.0 ../../ogc/citygml/3.0/vegetation.xsd
@@ -21,7 +21,7 @@
         http://www.opengis.net/citygml/dynamizer/3.0 ../../ogc/citygml/3.0/dynamizer.xsd
         http://www.opengis.net/citygml/versioning/3.0 ../../ogc/citygml/3.0/versioning.xsd
         http://www.opengis.net/gml/3.2 ../../ogc/gml/3.2.1/gml.xsd
-        http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlink.xsd"
+        http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlinks.xsd"
     gml:id="FarmModel_001">
 
     <gml:featureMember>
@@ -29,7 +29,6 @@
             <gml:name>Fazenda Modelo 2025</gml:name>
             <farm:holderID>CPF-12345678900</farm:holderID>
             <farm:officialID>INCRA-88990077</farm:officialID>
-            <farm:carCode>MG-0123456-7890</farm:carCode>
             <farm:ibgeCode>3145007</farm:ibgeCode>
             <farm:keepsRecords>true</farm:keepsRecords>
             <farm:farmProfile>
@@ -82,11 +81,11 @@
                     <gml:exterior>
                         <gml:LinearRing gml:id="lr_soy_2025">
                             <gml:posList>
-                                721128.11... 7702296.04... 0
-                                721128.11... 7701296.04... 0
-                                722128.11... 7701296.04... 0
-                                722128.11... 7702296.04... 0
-                                721128.11... 7702296.04... 0
+                                721128.11 7702296.04 0
+                                721128.117701296.04 0
+                                722128.11 7701296.04 0
+                                722128.11 7702296.04 0
+                                721128.11 7702296.04 0
                             </gml:posList>
                         </gml:LinearRing>
                     </gml:exterior>

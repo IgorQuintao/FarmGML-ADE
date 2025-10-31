@@ -8,7 +8,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     
     xsi:schemaLocation="
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 ../FarmGML.xsd
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 C:\Users\Usuario\Documents\GitHub\FarmGML-ADE\schemas\1.3\FarmGML.xsd
         http://www.opengis.net/citygml/3.0 ../../ogc/citygml/3.0/core.xsd
         http://www.opengis.net/citygml/landuse/3.0 ../../ogc/citygml/3.0/landUse.xsd
         http://www.opengis.net/citygml/vegetation/3.0 ../../ogc/citygml/3.0/vegetation.xsd
@@ -17,7 +17,7 @@
         http://www.opengis.net/citygml/dynamizer/3.0 ../../ogc/citygml/3.0/dynamizer.xsd
         http://www.opengis.net/citygml/versioning/3.0 ../../ogc/citygml/3.0/versioning.xsd
         http://www.opengis.net/gml/3.2 ../../ogc/gml/3.2.1/gml.xsd
-        http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlink.xsd"
+        http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlinks.xsd"
     gml:id="FarmModel_CropCycle_2025">
 
     <gml:featureMember>

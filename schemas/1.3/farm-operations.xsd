@@ -22,7 +22,7 @@
     <xs:import namespace="http://www.opengis.net/citygml/dynamizer/3.0" schemaLocation="../ogc/citygml/3.0/dynamizer.xsd"/>
     <xs:import namespace="http://www.opengis.net/citygml/versioning/3.0" schemaLocation="../ogc/citygml/3.0/versioning.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ogc/gml/3.2.1/gml.xsd"/> 
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlink.xsd"/>
+    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../ogc/gml/3.2.1/xlinks.xsd"/>
 
     <xs:include schemaLocation="farm-core.xsd"/>
     <xs:include schemaLocation="farm-hooks.xsd"/>

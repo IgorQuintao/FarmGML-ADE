@@ -35,6 +35,7 @@
     <xs:element name="_GenericApplicationPropertyOfHarvestedLot" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfAgriculturalOperation" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
     <xs:element name="_GenericApplicationPropertyOfAbstractRuralEnterprise" type="farm:AbstractFarmGenericAttributeType" abstract="true" substitutionGroup="core:AbstractGenericAttribute"/>
+    
 
     <xs:complexType name="_ADEOfLandUseType">
         <xs:annotation>
