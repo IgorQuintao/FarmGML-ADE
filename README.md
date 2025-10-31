@@ -154,6 +154,7 @@ FarmGML-ADE/
 ## First Validation and Conformance
 
 Validation was performed using `xmlschema 2.5.1` and `Python 3.11` via the script below:
+```bash
 import xmlschema
 from pathlib import Path
 
@@ -171,7 +172,7 @@ for gml in EXAMPLES_DIR.glob("*.gml"):
         print(f"{gml} : OK ✅")
     except xmlschema.XMLSchemaException as e:
         print(f"{gml} : Error ❌ -> {e.reason}")
-
+```
 ---
 
 ## ✅ Validation Results
