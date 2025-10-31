@@ -6,7 +6,9 @@
 
 ---
 
-**FarmGML** is an *Application Domain Extension (ADE)* of **CityGML 3.0**, designed to represent **rural and agricultural features** in a 3D geospatial context.
+**FarmGML** is an *Application Domain Extension (ADE)* of **CityGML 3.0**, designed to represent **rural enterprises, agricultural activities, and agro-environmental data** consistent with digital twin semantics.
+
+It allows the integration of agricultural and environmental information into structures compatible with 3D models, spatial databases, WebGIS platforms (CesiumJS), and agroclimatic analytics systems.
 
 It extends CityGML classes (such as `LandUse`, `Vegetation`, and `Building`) to model:
 - Rural properties and agricultural enterprises  
@@ -28,7 +30,7 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 | **Namespace URI** | `https://igorquintao.github.io/FarmGML-ADE/schemas/1.3` |
 | **Schema Location** | `https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd` |
 | **Prefix** | `farm` |
-| **Last Updated** | 2025-10-27 |
+| **Last Updated** | 2025-10-31 |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 
 ---
@@ -46,41 +48,66 @@ FarmGML-ADE/
 │   └── 1.3/
 │       ├── FarmGML.xsd
 │       ├── farm-core.xsd
+│       ├── farm-hooks.xsd
+│       ├── farm-enterprise.xsd
 │       ├── farm-production.xsd
 │       ├── farm-operations.xsd
-│       ├── farm-enterprise.xsd
 │       ├── farm-risk.xsd
 │       ├── farm-sustainability.xsd
 │       ├── farm-temporal.xsd
-│       ├── farm-hooks.xsd
+│       ├── farm-join.xsd
+│       │
 │       ├── codelists/
 │       │   ├── BuildingType.xml
 │       │   ├── CropGrowthStage.xml
-│       │   ├── MainLocationType.xml
-│       │   ├── LandTenureType.xml
-│       │   ├── Sex.xml
 │       │   ├── EducationLevel.xml
-│       │   ├── RelationshipToHead.xml
 │       │   ├── FeedingPractice.xml
 │       │   ├── ForestryProductType.xml
-│       │   ├── SeedVarietyType.xml
 │       │   ├── InputType.xml
-│       │   ├── StorageType.xml
-│       │   └── OperationType.xml
+│       │   ├── LandTenureType.xml
+│       │   ├── MainLocationType.xml
+│       │   ├── OperationType.xml
+│       │   ├── RelationshipToHead.xml
+│       │   ├── SeedVarietyType.xml
+│       │   ├── Sex.xml
+│       │   └── StorageType.xml 
+│       │
 │       ├── examples/
 │       │   ├── example_ruralproperty.gml
+│       │   ├── example_simp-ruralproperty.gml
 │       │   ├── example_cropcycle.gml
 │       │   └── example_enterprise.gml
-│       └── metadata/
-│           └── farmgml-metadata.yaml
+│       ├── metadata/
+│       │   └── farmgml-metadata.yaml
+│       │
+│       └── ogc/
+│           ├── citygml/
+│           │   ├── 3.0/
+│           │   │   ├── core.xsd        
+│           │   │   ├── landUse.xsd
+│           │   │   ├── building.xsd
+│           │   │   ├── vegetation.xsd
+│           │   │   ├── generics.xsd
+│           │   │   ├── dynamizer.xsd
+│           │   │   └── versioning.xsd
+│           │   └── xAL/
+│           │       ├── xAL-types.xsd
+│           │       └── xAL.xsd
+│           │
+│           └── gml/
+│               └── 3.2.1/
+│                   ├── gml.xsd
+│                   └── xlinks.xsd
 │
-├── tools/                  # Automation and validation tools
+├── tools/                   # Automation and validation tools
 │   ├── shapechange-config/
 │   │   └── farmgml_1.3_config.xml
 │   ├── scripts/
 │   │   ├── generate-xsd-from-uml.bat
 │   │   └── validate-xsd.sh
 │   └── validation/
+│       ├── validate_farmgml.py 
+│       │
 │       └── schematron/
 │           └── farmgml_rules.sch
 │
@@ -89,9 +116,11 @@ FarmGML-ADE/
 │   │   ├── FarmGML_Conceptual_Model.pdf
 │   │   ├── FarmGML_Encoding_Specification.pdf
 │   │   └── FarmGML_UseCases.pdf
+│   │
 │   ├── schema-reference/
 │   │   └── 1.3/
 │   │       └── farmgml_rules.sch
+│   │
 │   └── policies/
 │       └── namespace-policy.md
 │
@@ -104,6 +133,23 @@ FarmGML-ADE/
 ├── LICENSE.txt
 └── README.md
 ```
+
+---
+
+## 🧠  Schema Modules
+
+| Module                      | Description                                                                 |
+| :-------------------------- | :-------------------------------------------------------------------------- |
+| **farm-core.xsd**           | Defines the FarmGML core model (RuralProperty, LandUnit, FarmProfile, etc.) |
+| **farm-enterprise.xsd**     | Models rural enterprises, their legal and structural attributes             |
+| **farm-production.xsd**     | Defines productive areas (AnnualCropArea, PerennialCropArea, Pasture, etc.) |
+| **farm-operations.xsd**     | Describes agricultural operations and temporal dynamizers                   |
+| **farm-risk.xsd**           | Structures for insurance, risk indexes, and ZARC indicators                 |
+| **farm-sustainability.xsd** | Environmental and sustainability indicators                                 |
+| **farm-temporal.xsd**       | Temporal modeling based on `core:AbstractTimeSliceType`                     |
+| **farm-hooks.xsd**          | ADE integration hooks for CityGML generic linkage                           |
+
+
 ---
 
 ## ⚙️ Model-Driven Architecture (MDA) Workflow
