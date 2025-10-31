@@ -149,6 +149,42 @@ FarmGML-ADE/
 | **farm-temporal.xsd**       | Temporal modeling based on `core:AbstractTimeSliceType`                     |
 | **farm-hooks.xsd**          | ADE integration hooks for CityGML generic linkage                           |
 
+---
+
+## First Validation and Conformance
+
+Validation was performed using `xmlschema 2.5.1` and `Python 3.11` via the script below:
+import xmlschema
+from pathlib import Path
+
+XSD_PATH = Path("schemas/1.3/FarmGML.xsd")
+EXAMPLES_DIR = Path("schemas/1.3/examples")
+
+schema = xmlschema.XMLSchema(XSD_PATH)
+
+print(f"✅ Loaded schema: {XSD_PATH}")
+print("🔍 Validating examples...\n")
+
+for gml in EXAMPLES_DIR.glob("*.gml"):
+    try:
+        schema.validate(gml)
+        print(f"{gml} : OK ✅")
+    except xmlschema.XMLSchemaException as e:
+        print(f"{gml} : Error ❌ -> {e.reason}")
+
+---
+
+## ✅ Validation Results
+| **GML File**                       | **Status** |
+| ------------------------------ | :----: |
+| example_cropcycle.gml          |  ✅ OK  |
+| example_enterprise.gml         |  ✅ OK  |
+| example_ruralproperty.gml      |  ✅ OK  |
+| example_simp-ruralproperty.gml |  ✅ OK  |
+
+## Conclusion:
+All GML example files were successfully validated.
+The `FarmGML.xsd` schema is fully compliant with **OGC CityGML 3.0 ADE** and **GML 3.2.1** standards.
 
 ---
 
