@@ -24,9 +24,9 @@
         <farm:RuralProperty gml:id="farm_RP_002">
           <gml:name>Fazenda Boa Safra</gml:name>
           <farm:holderID>CPF-98765432100</farm:holderID>
-          <farm:officialID>INCRA-00112233</farm:officialID>
           <farm:carCode>GO-0099887-2233</farm:carCode>
           <farm:ibgeCode>5208707</farm:ibgeCode>
+          <farm:officialID>INCRA-00112233</farm:officialID>
           <farm:keepsRecords>true</farm:keepsRecords>
         </farm:RuralProperty>
     </gml:featureMember>
