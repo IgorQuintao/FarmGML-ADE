@@ -106,7 +106,8 @@ FarmGML-ADE/
 │   │   ├── generate-xsd-from-uml.bat
 │   │   └── validate-xsd.sh
 │   └── validation/
-│       ├── validate_farmgml.py 
+│       ├── validate_farmgml.py
+│       ├── validate_report.html  
 │       │
 │       └── schematron/
 │           └── farmgml_rules.sch
