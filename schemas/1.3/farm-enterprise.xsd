@@ -15,6 +15,7 @@
     <xs:annotation><xs:appinfo>Package: farm-enterprise</xs:appinfo></xs:annotation>
 
     <xs:element name="_AbstractRuralEnterprise" type="farm:AbstractRuralEnterpriseType" abstract="true" substitutionGroup="core:AbstractFeature"/>
+    
     <xs:complexType name="AbstractRuralEnterpriseType" abstract="true">
         <xs:complexContent>
             <xs:extension base="core:AbstractFeatureWithLifespanType"> <xs:sequence>
@@ -27,6 +28,7 @@
     </xs:complexType>
 
     <xs:element name="LivestockEnterprise" type="farm:LivestockEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    
     <xs:complexType name="LivestockEnterpriseType">
         <xs:complexContent>
             <xs:extension base="farm:AbstractRuralEnterpriseType">
@@ -45,7 +47,9 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    
     <xs:element name="AquacultureEnterprise" type="farm:AquacultureEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    
     <xs:complexType name="AquacultureEnterpriseType">
          <xs:complexContent>
             <xs:extension base="farm:AbstractRuralEnterpriseType">
@@ -55,7 +59,9 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
     <xs:element name="ForestryEnterprise" type="farm:ForestryEnterpriseType" substitutionGroup="farm:_AbstractRuralEnterprise"/>
+    
     <xs:complexType name="ForestryEnterpriseType">
          <xs:complexContent>
             <xs:extension base="farm:AbstractRuralEnterpriseType">
@@ -65,6 +71,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
     <xs:complexType name="RuralEnterprisePropertyType">
         <xs:sequence minOccurs="0">
              <xs:element ref="farm:_AbstractRuralEnterprise"/>

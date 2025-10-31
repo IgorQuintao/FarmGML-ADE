@@ -30,6 +30,7 @@
     <xs:annotation><xs:appinfo>Package: farm-core</xs:appinfo></xs:annotation>
 
     <xs:element name="RuralProperty" type="farm:RuralPropertyType" substitutionGroup="luse:LandUse"/>
+    
     <xs:complexType name="RuralPropertyType">
         <xs:complexContent>
             <xs:extension base="luse:LandUseType">

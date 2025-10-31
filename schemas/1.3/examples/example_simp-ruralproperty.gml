@@ -17,7 +17,7 @@
     http://www.opengis.net/citygml/dynamizer/3.0 ../../ogc/citygml/3.0/dynamizer.xsd
     http://www.opengis.net/citygml/versioning/3.0 ../../ogc/citygml/3.0/versioning.xsd
     http://www.opengis.net/gml/3.2 ../../ogc/gml/3.2.1/gml.xsd
-    http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlink.xsd
+    http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlinks.xsd
         ">
     
     <core:creationDate>2025-10-30T10:00:00Z</core:creationDate>
