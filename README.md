@@ -25,8 +25,8 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 ## Table of Contents
 * [About the Project](#about-the-project)
 * [Modeled Features](#modeled-features)
-* [Repository Structure](#-repository-structure)
-* [Usage Instructions](#-usage-instructions)
+* [Version Information](#version-information)
+* [Repository Structure](#repository-structure)
     * [1. Setup for Offline Validation](#1-setup-for-offline-validation)
     * [2. How to Use the Schema in your GML](#2-how-to-use-the-schema-in-your-gml)
     * [3. How to Validate your GML Files](#3-how-to-validate-your-gml-files)
