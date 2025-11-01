@@ -15,6 +15,7 @@
         http://www.opengis.net/citygml/building/3.0 ../../ogc/citygml/3.0/building.xsd
         http://www.opengis.net/citygml/generics/3.0 ../../ogc/citygml/3.0/generics.xsd
         http://www.opengis.net/citygml/dynamizer/3.0 ../../ogc/citygml/3.0/dynamizer.xsd
+        http://www.opengis.net/citygml/versioning/3.0 ../../ogc/citygml/3.0/xAL.xsd
         http://www.opengis.net/citygml/versioning/3.0 ../../ogc/citygml/3.0/versioning.xsd
         http://www.opengis.net/gml/3.2 ../../ogc/gml/3.2.1/gml.xsd
         http://www.w3.org/1999/xlink ../../ogc/gml/3.2.1/xlink.xsd"
@@ -29,7 +30,7 @@
             <farm:lod0Geometry>
                 <gml:Polygon gml:id="geom_RP_001_lod0" srsName="urn:ogc:def:crs:EPSG::31983">
                     <gml:exterior>
-                        <gml:LinearRing gml:id="lr_RP_001_lod0">
+                        <gml:LinearRing>
                             <gml:posList>
                                 721000 7702500 0
                                 721000 7701000 0
@@ -51,7 +52,7 @@
             <farm:lod0Geometry>
                 <gml:Polygon gml:id="geom_soy_2025" srsName="urn:ogc:def:crs:EPSG::31983">
                     <gml:exterior>
-                        <gml:LinearRing gml:id="lr_soy_2025">
+                        <gml:LinearRing>
                             <gml:posList>
                                 721128 7702296 0
                                 721128 7701296 0
