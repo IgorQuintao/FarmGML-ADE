@@ -1,0 +1,131 @@
+ Detailed Description of the FarmGML ADE v1.3 Schema Modules
+The FarmGML Application Domain Extension (ADE) is a modular extension of 
+CityGML 3.0 designed to represent agricultural and rural information in a semantically 
+rich, spatially explicit way.
+Each module corresponds to a thematic domain — such as farm structure, production, 
+operations, risk, or sustainability — and can operate independently or as part of an 
+integrated semantic model.
+---
+ farm-core.xsd — Core conceptual and structural model
+The farm-core.xsd schema defines the conceptual foundation of the FarmGML ADE.
+It introduces the key entities, properties, and relationships that form the backbone of all 
+other modules.
+Main Components
+farm:RuralProperty — Represents the fundamental legal and spatial unit of the model.
+Includes cadastral, administrative, and locational attributes such as CAR code, IBGE 
+municipality, ownership, and boundary geometry.
+farm:LandUnit — Subdivision of the rural property, used to represent functional areas 
+such as fields, forests, and facilities.
+farm:FarmProfile — Describes the enterprise profile, including legal status, market 
+integration, and record-keeping behavior.
+farm:FarmSize, farm:PhysicalSizeAAU, farm:EconomicSize — Represent both physical 
+and economic dimensions of the holding.
+Purpose
+Acts as the semantic core of the ADE, providing base types and properties that extend 
+core:AbstractFeatureType from CityGML.
+All other modules reference or specialize these foundational classes.
+---
+ farm-enterprise.xsd — Organizational and legal enterprise structures
+The farm-enterprise.xsd module models agricultural enterprises, covering their 
+organizational, legal, and economic identity.
+It bridges physical property data with business and administrative information.
+Main Components
+farm:AbstractRuralEnterprise — Abstract superclass for all enterprise types.
+farm:AgroIndustrialUnit, farm:Cooperative, farm:FamilyFarm — Specializations for 
+different production and governance models.
+farm:holderID, farm:officialID — Legal identifiers such as tax numbers, registry entries, 
+or producer IDs.
+farm:enterpriseLocation — Spatial link to the geographic representation of the enterprise.
+Purpose
+Provides a semantic link between spatial assets and economic actors, enabling integration 
+with cadastral, regulatory, and financial systems.
+---
+ farm-production.xsd — Productive land use and crop systems
+The farm-production.xsd module defines the productive domain of the FarmGML model, 
+focusing on crop areas, pastures, and forestry systems.
+It captures both the spatial extent and the agronomic attributes of each productive unit.
+Main Components
+farm:AnnualCropArea, farm:PerennialCropArea, farm:PastureArea — Specialized landuse features derived from veg:PlantCoverType.
+farm:CropCycle — Temporal representation of planting, growth, and harvesting periods.
+farm:HarvestedLot — Records production output with traceability and commercialization 
+attributes.
+farm:TraceabilityInfo — Includes blockchain hash, certification codes, or internal 
+tracking IDs.
+farm:lod0Geometry, farm:lod1Geometry — 2D/3D spatial geometries in UTM or local 
+coordinate systems.
+Purpose
+Serves as the operational heart of the ADE, representing what is produced, where, and 
+under what conditions — supporting analytics on yields, management efficiency, and 
+land use.
+---
+ farm-operations.xsd — Agricultural operations and temporal dynamics
+The farm-operations.xsd module captures on-farm activities and temporal dynamics, such 
+as irrigation, tillage, fertilization, and harvesting events.
+Main Components
+farm:Operation — Abstract superclass for all operational activities.
+farm:FieldTask, farm:MachineryUse, farm:IrrigationEvent — Specific types of 
+operations with temporal and resource parameters.
+farm:DynamicParameter — Extends core:AbstractDynamizerType to link time-varying 
+sensor or observation data.
+farm:operationCost, farm:resourceUse — Optional attributes for economic and input-use 
+indicators.
+Purpose
+Enables representation of processes and events over time, supporting simulation, 
+efficiency assessment, and precision-agriculture analytics.
+---
+ farm-risk.xsd — Agricultural risk and insurance modeling
+The farm-risk.xsd module handles climatic and insurance-related risk assessment, aligned 
+with Brazil’s ZARC (Agroclimatic Risk Zoning) framework.
+Main Components
+farm:InsuranceRisk — Central class for risk evaluation at the crop or enterprise level.
+farm:ZarcScore, farm:RiskClassificationKey — Reference indices and classification 
+codes.
+farm:calculationDate, farm:riskLevel — Attributes describing validity period and 
+severity of risk.
+Purpose
+Supports the integration of risk data into spatial decision-making, linking agricultural 
+insurance, climate vulnerability, and farm management systems.
+---
+ farm-sustainability.xsd — Environmental indicators and sustainability metrics
+The farm-sustainability.xsd module provides a framework for environmental 
+performance indicators and sustainable management metrics.
+Main Components
+farm:SustainabilityIndicator — Generic structure for sustainability assessment.
+farm:carbonFootprint, farm:waterUsageEfficiency, farm:biodiversityIndex, 
+farm:bioinputUsageRate — Core indicators of sustainability.
+farm:certificationType, farm:complianceStandard — Optional attributes for certification 
+schemes and regulatory frameworks.
+Purpose
+Facilitates quantitative evaluation of environmental performance, supporting 
+certification, carbon accounting, and eco-efficiency benchmarking.
+---
+ farm-temporal.xsd — Temporal modeling and versioning
+The farm-temporal.xsd module extends CityGML’s temporal model 
+(core:AbstractTimeSliceType) to support agricultural state management and change 
+tracking.
+Main Components
+farm:TemporalState — Generic temporal representation of any FarmGML feature.
+farm:CropTimeSlice, farm:OperationTimeSlice — Time slices for specific domains 
+(production or operation).
+farm:validFrom / farm:validTo — Validity periods of a temporal state.
+farm:timeSeriesLink — Reference to time-series datasets or dynamic sensor 
+observations.
+Purpose
+Allows full temporal versioning and “Digital Twin” synchronization, enabling 
+longitudinal analysis and historical reconstruction of agricultural systems.
+---
+ farm-hooks.xsd — ADE integration and interoperability framework
+The farm-hooks.xsd module establishes the integration layer between FarmGML and the 
+CityGML 3.0 core, defining how ADE components attach to existing CityGML feature 
+types.
+Main Components
+farm:_GenericApplicationPropertyOfRuralProperty — Entry point for user-defined or 
+domain-specific extensions.
+core:_ADEComponent — Integration mechanism to embed ADE properties within 
+CityGML features.
+farm:ADEOfBuilding, farm:ADEOfLandUse — Optional extension hooks for the 
+Building and LandUse modules.
+Purpose
+Ensures semantic and structural interoperability with the broader CityGML ecosystem —
+allowing rural, agricultural, and environmental data to coexist seamlessly with urban and 
+infrastructure models.
