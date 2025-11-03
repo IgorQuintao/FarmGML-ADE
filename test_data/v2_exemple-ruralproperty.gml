@@ -25,7 +25,7 @@
     gml:id="FarmModel_001">
 
   <core:cityObjectMember>
-    <farm:RuralProperty gml:id="FarmModel_001">
+    <farm:RuralProperty gml:id="FarmModel_001-A">
       <gml:name>Fazenda Modelo 2025</gml:name>
       <farm:holderID>CPF-12345678900</farm:holderID>
       <farm:officialID>INCRA-88990077</farm:officialID>
