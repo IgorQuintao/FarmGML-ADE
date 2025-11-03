@@ -42,6 +42,22 @@
         <farm:physicalSizeAAU uom="ha">50.0</farm:physicalSizeAAU>
       </farm:farmSize>
 
+      <farm:lod0Geometry>
+         <gml:Polygon gml:id="geom_RP_001_lod0" srsName="urn:ogc:def:crs:EPSG::31983">
+            <gml:exterior>
+                <gml:LinearRing>
+                    <gml:posList>
+                        721000 7702500 0
+                        721000 7701000 0
+                        722500 7701000 0
+                        722500 7702500 0
+                        721000 7702500 0
+                    </gml:posList>
+                </gml:LinearRing>
+            </gml:exterior>
+         </gml:Polygon>
+      </farm:lod0Geometry>
+
       <core:genericAttribute>
         <farm:insuranceRisk>
             <farm:zarcScore>78</farm:zarcScore>
@@ -58,6 +74,10 @@
 
     </farm:RuralProperty>
 
+
+  </core:cityObjectMember>
+  
+  <core:cityObjectMember>
     <farm:AnnualCropArea>
         <gml:name>Talhão de Soja</gml:name>
         <farm:cropName>Soja</farm:cropName>
