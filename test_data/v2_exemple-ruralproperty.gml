@@ -12,7 +12,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     
     xsi:schemaLocation="
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/refs/heads/main/xsd/FarmGML_ADE_v1-3.xsd
         http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
         http://www.opengis.net/citygml/landuse/3.0 http://schemas.opengis.net/citygml/3.0/landUse.xsd
         http://www.opengis.net/citygml/vegetation/3.0 http://schemas.opengis.net/citygml/3.0/vegetation.xsd
