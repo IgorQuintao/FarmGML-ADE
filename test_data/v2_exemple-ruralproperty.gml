@@ -32,10 +32,12 @@
       <farm:carCode>MG-0123456-7890</farm:carCode>
       <farm:ibgeCode>3145007</farm:ibgeCode>
       <farm:keepsRecords>true</farm:keepsRecords>
+
       <farm:farmProfile>
         <farm:legalStatus>juridicalPerson</farm:legalStatus>
         <farm:marketIntegration>mainlyForSale</farm:marketIntegration>
       </farm:farmProfile>
+
       <farm:farmSize>
         <farm:physicalSizeAAU uom="ha">50.0</farm:physicalSizeAAU>
       </farm:farmSize>
@@ -47,6 +49,7 @@
             <farm:riskClassificationKey>ZARC2025_MG_SOY</farm:riskClassificationKey>
         </farm:insuranceRisk>
       </core:genericAttribute>
+
       <core:genericAttribute>
         <farm:sustainability>
             <farm:carbonFootprint uom="kgCO2e/ha">950.0</farm:carbonFootprint>
@@ -54,15 +57,14 @@
       </core:genericAttribute>
 
     </farm:RuralProperty>
-  </core:cityObjectMember>
 
-  <core:cityObjectMember>
     <farm:AnnualCropArea>
         <gml:name>Talhão de Soja</gml:name>
         <farm:cropName>Soja</farm:cropName>
         <farm:cropCode codeSpace="https://agrovoc.fao.org/">SOY</farm:cropCode>
         <farm:plantingDate>2025-11-01</farm:plantingDate>
         <farm:isIrrigated>true</farm:isIrrigated>
+        
         <farm:lod0Geometry>
             <gml:Polygon gml:id="geom_soy_2025" srsName="urn:ogc:def:crs:EPSG::31983">
               <gml:exterior>
@@ -78,12 +80,14 @@
               </gml:exterior>
             </gml:Polygon>
         </farm:lod0Geometry>
+        
         <farm:producesLot>
             <farm:HarvestedLot gml:id="harvest_2025_001">
               <farm:quantityHarvested uom="t">145.0</farm:quantityHarvested>
               <farm:harvestDate>2026-03-10</farm:harvestDate>
             </farm:HarvestedLot>
         </farm:producesLot>
+
     </farm:AnnualCropArea>
   </core:cityObjectMember>
 
