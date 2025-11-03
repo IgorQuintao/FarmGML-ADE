@@ -12,7 +12,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     
     xsi:schemaLocation="
-        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://igorquintao.github.io/FarmGML-ADE/schemas/1.3/FarmGML.xsd
+        https://igorquintao.github.io/FarmGML-ADE/schemas/1.3 https://raw.githubusercontent.com/IgorQuintao/FarmGML-ADE/main/schemas/1.3/FarmGML.xsd
         http://www.opengis.net/citygml/3.0 http://schemas.opengis.net/citygml/3.0/core.xsd
         http://www.opengis.net/citygml/landuse/3.0 http://schemas.opengis.net/citygml/3.0/landUse.xsd
         http://www.opengis.net/citygml/vegetation/3.0 http://schemas.opengis.net/citygml/3.0/vegetation.xsd
@@ -21,11 +21,11 @@
         http://www.opengis.net/citygml/dynamizer/3.0 http://schemas.opengis.net/citygml/3.0/dynamizer.xsd
         http://www.opengis.net/citygml/versioning/3.0 http://schemas.opengis.net/citygml/3.0/versioning.xsd
         http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
-        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd"
+        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlinks.xsd"
     gml:id="FarmModel_001">
 
   <core:cityObjectMember>
-    <farm:RuralProperty>
+    <farm:RuralProperty gml:id="FarmModel_001">
       <gml:name>Fazenda Modelo 2025</gml:name>
       <farm:holderID>CPF-12345678900</farm:holderID>
       <farm:officialID>INCRA-88990077</farm:officialID>
