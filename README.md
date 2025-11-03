@@ -69,12 +69,35 @@ FarmGML is divided into modules, including:
 ```bash
 FarmGML-ADE/
 │
+├── xsd/                  # FarmGML and modules (100% online)
+│   ├── FarmGML_ADE_v1-3.xsd
+│   │
+│   └── modules/
+│       ├── farm-core.xsd
+│       ├── farm-hooks.xsd
+│       ├── farm-enterprise.xsd
+│       ├── farm-production.xsd
+│       ├── farm-operations.xsd
+│       ├── farm-risk.xsd
+│       ├── farm-sustainability.xsd
+│       ├── farm-temporal.xsd
+│       └── farm-join.xsd
+│
+├── test_data/                  # Load the GML Test Data in QGIS
+│   ├── example_ruralproperty.gml
+│   ├── example_cropcycle.gml
+│   ├── example_enterprise.gml
+│   ├── examplo_macro_lod0_ruralproperty.gml
+│   ├── examplo_meso_lod1_ruralproperty.gml
+│   ├── v1_example_ruralproperty.gml
+│   └── v2_example_ruralproperty.gml
+│       
 ├── model/                  # UML/XMI source (conceptual model)
 │   └── 1.3/
 │       ├── FarmGML_v1.3.xmi
 │       └── diagrams/
 │
-├── schemas/                # Generated schemas and examples (distribution)
+├── schemas/                # Generated schemas and examples (distribution 100% offline)
 │   └── 1.3/
 │       ├── FarmGML.xsd
 │       ├── farm-core.xsd
