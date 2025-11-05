@@ -29,10 +29,10 @@
 
     <xs:annotation><xs:appinfo>Package: farm-operations</xs:appinfo></xs:annotation>
 
-    <xs:element name="AgriculturalOperation" type="farm:AgriculturalOperationType" substitutionGroup="core:AbstractDynamizer"/>
+    <xs:element name="AgriculturalOperation" type="farm:AgriculturalOperationType" substitutionGroup="dyn:AbstractDynamizer"/>
     <xs:complexType name="AgriculturalOperationType">
         <xs:complexContent>
-            <xs:extension base="core:AbstractDynamizerType">
+            <xs:extension base="dyn:AbstractDynamizerType">
                 <xs:sequence>
                     <xs:element name="operationType" type="gml:CodeType">
                         <xs:annotation><xs:documentation>CodeSpace suggestion: urn:farm:codelist:operationtype</xs:documentation></xs:annotation>
@@ -51,7 +51,7 @@
              <xs:element ref="farm:AgriculturalOperation"/>
         </xs:sequence>
         <xs:attribute ref="xlink:href"/>
-        <xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
 </xs:schema>
