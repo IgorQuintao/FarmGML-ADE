@@ -78,7 +78,7 @@
   </core:cityObjectMember>
   
   <core:cityObjectMember>
-    <farm:AnnualCropArea>
+    <farm:AnnualCropArea gml:id="Talhao_Soja_01">
         <gml:name>Talhão de Soja</gml:name>
         <farm:cropName>Soja</farm:cropName>
         <farm:cropCode codeSpace="https://agrovoc.fao.org/">SOY</farm:cropCode>
