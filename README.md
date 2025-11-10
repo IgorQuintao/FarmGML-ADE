@@ -244,21 +244,6 @@ The `FarmGML.xsd` schema is fully compliant with **OGC CityGML 3.0 ADE** and **G
 
 ---
 
-## ⚙️ Model-Driven Architecture (MDA) Workflow
-
-FarmGML adopts a **Model-Driven Architecture** approach.  
-All schemas and documentation are generated from the UML conceptual model.
-
-**Workflow summary:**
-1. Model conceptual features in UML.
-2. Export UML → XMI (`model/1.3/FarmGML_v1.3.xmi`).
-3. Configure **ShapeChange** using `tools/shapechange-config/farmgml_1.3_config.xml`.
-4. Run ShapeChange to generate XSD modules under `schemas/1.3/`.
-5. Validate using the included `validate-xsd.sh` script.
-6. Test instances (`example_ruralproperty.gml`) with **3DCityDB**, **CesiumJS**, and **QGIS**.
-
----
-
 ## Validation and Use Cases
 
 To validate the FarmGML ADE:
