@@ -27,7 +27,6 @@ FarmGML enables integration between **3D city models**, **agricultural informati
 * [Modeled Features](#modeled-features)
 * [Version Information](#-version-information)
 * [Validation Results](#-validation-results)
-* [Workflow (MDA)](#-workflow-mda)
 * [References](#-references)
 * [Contact](#-contact)
 
