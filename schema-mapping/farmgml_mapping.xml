@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adeTransformation schemaVersion="5.0" xmlns="http://www.3dcitydb.org/ade/transformation/5.0">
+
+  <feature name="RuralProperty" classId="10001" extends="LandUse">
+    <table name="farm_rural_property">
+      
+      <column name="name" type="VARCHAR(1000)">
+        <import xpath="gml:name/text()"/>
+        <export xpath="gml:name"/>
+      </column>
+
+      <column name="holder_id" type="VARCHAR(255)">
+        <import xpath="farm:holderID/text()"/>
+        <export xpath="farm:holderID"/>
+      </column>
+
+      <column name="car_code" type="VARCHAR(255)">
+        <import xpath="farm:carCode/text()"/>
+        <export xpath="farm:carCode"/>
+      </column>
+
+      <column name="ibge_code" type="VARCHAR(10)">
+        <import xpath="farm:ibgeCode/text()"/>
+        <export xpath="farm:ibgeCode"/>
+      </column>
+
+      <geometry lod="0" property="farm:lod0Geometry"/>
+      <geometry lod="1" property="farm:lod1Geometry"/>
+
+      <column name="legal_status" type="VARCHAR(50)">
+        <import xpath="farm:farmProfile/farm:legalStatus/text()"/>
+        <export xpath="farm:farmProfile/farm:legalStatus"/>
+      </column>
+      <column name="market_integration" type="VARCHAR(50)">
+        <import xpath="farm:farmProfile/farm:marketIntegration/text()"/>
+        <export xpath="farm:farmProfile/farm:marketIntegration"/>
+      </column>
+      <column name="commodity_specialization" type="VARCHAR(50)">
+        <import xpath="farm:farmProfile/farm:commoditySpecialization/text()"/>
+        <export xpath="farm:farmProfile/farm:commoditySpecialization"/>
+      </column>
+      <column name="producer_type" type="VARCHAR(50)">
+        <import xpath="farm:farmProfile/farm:producerType/text()"/>
+        <export xpath="farm:farmProfile/farm:producerType"/>
+      </column>
+
+      <column name="physical_size_aau" type="DOUBLE PRECISION">
+        <import xpath="farm:farmSize/farm:physicalSizeAAU/text()"/>
+        <export xpath="farm:farmSize/farm:physicalSizeAAU"/>
+      </column>
+      <column name="physical_size_aau_uom" type="VARCHAR(20)">
+        <import xpath="farm:farmSize/farm:physicalSizeAAU/@uom"/>
+        <export xpath="farm:farmSize/farm:physicalSizeAAU" uomAttribute="uom"/>
+      </column>
+
+      <column name="total_agri_output" type="DOUBLE PRECISION">
+        <import xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput/text()"/>
+        <export xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput"/>
+      </column>
+      <column name="total_agri_output_uom" type="VARCHAR(20)">
+        <import xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput/@uom"/>
+        <export xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput" uomAttribute="uom"/>
+      </column>
+
+      <feature property="farm:enterprise"/>
+      <feature property="farm:operation"/>
+
+    </table>
+  </feature>
+
+  <hook name="adeOfBuilding" classId="10002" hook="adeOfBuilding">
+    <table name="farm_bldg_properties">
+      <column name="building_type" type="VARCHAR(100)">
+        <import xpath="farm:buildingType/text()"/>
+        <export xpath="farm:buildingType"/>
+      </column>
+      <column name="building_type_codespace" type="VARCHAR(1000)">
+        <import xpath="farm:buildingType/@codeSpace"/>
+        <export xpath="farm:buildingType" codeSpaceAttribute="codeSpace"/>
+      </column>
+      <column name="purpose" type="VARCHAR(1000)">
+        <import xpath="farm:purpose/text()"/>
+        <export xpath="farm:purpose"/>
+      </column>
+    </table>
+  </hook>
+
+  <feature name="LivestockEnterprise" classId="10010" extends="AbstractFeatureWithLifespanType">
+    <table name="farm_livestock_enterprise">
+      <column name="occupied_area" type="DOUBLE PRECISION">
+        <import xpath="farm:occupiedArea/text()"/>
+        <export xpath="farm:occupiedArea"/>
+      </column>
+      <column name="occupied_area_uom" type="VARCHAR(20)">
+        <import xpath="farm:occupiedArea/@uom"/>
+        <export xpath="farm:occupiedArea" uomAttribute="uom"/>
+      </column>
+      <column name="start_date" type="DATE">
+        <import xpath="farm:startDate/text()"/>
+        <export xpath="farm:startDate"/>
+      </column>
+      <column name="livestock_type" type="VARCHAR(100)">
+        <import xpath="farm:livestockType/text()"/>
+        <export xpath="farm:livestockType"/>
+      </column>
+      <column name="livestock_type_codespace" type="VARCHAR(1000)">
+        <import xpath="farm:livestockType/@codeSpace"/>
+        <export xpath="farm:livestockType" codeSpaceAttribute="codeSpace"/>
+      </column>
+      <column name="livestock_category" type="VARCHAR(100)">
+        <import xpath="farm:livestockCategory/text()"/>
+        <export xpath="farm:livestockCategory"/>
+      </column>
+      <column name="feeding_practice" type="VARCHAR(100)">
+        <import xpath="farm:feedingPractice/text()"/>
+        <export xpath="farm:feedingPractice"/>
+      </column>
+    </table>
+  </feature>
+
+  <feature name="AnnualCropArea" classId="10020" extends="PlantCover">
+    <table name="farm_annual_crop_area">
+      <column name="crop_name" type="VARCHAR(255)">
+        <import xpath="farm:cropName/text()"/>
+        <export xpath="farm:cropName"/>
+      </column>
+      <column name="crop_code" type="VARCHAR(100)">
+        <import xpath="farm:cropCode/text()"/>
+        <export xpath="farm:cropCode"/>
+      </column>
+      <column name="crop_code_space" type="VARCHAR(1000)">
+        <import xpath="farm:cropCode/@codeSpace"/>
+        <export xpath="farm:cropCode" codeSpaceAttribute="codeSpace"/>
+      </column>
+      <column name="producer_type" type="VARCHAR(50)">
+        <import xpath="farm:producerType/text()"/>
+        <export xpath="farm:producerType"/>
+      </column>
+      <geometry lod="0" property="farm:lod0Geometry"/>
+      <feature property="farm:producesLot"/>
+    </table>
+  </feature>
+
+  <feature name="PerennialCropArea" classId="10021" extends="PlantCover">
+    <table name="farm_perennial_crop_area">
+      <column name="crop_name" type="VARCHAR(255)">
+        <import xpath="farm:cropName/text()"/>
+        <export xpath="farm:cropName"/>
+      </column>
+      <column name="crop_code" type="VARCHAR(100)">
+        <import xpath="farm:cropCode/text()"/>
+        <export xpath="farm:cropCode"/>
+      </column>
+      <column name="crop_code_space" type="VARCHAR(1000)">
+        <import xpath="farm:cropCode/@codeSpace"/>
+        <export xpath="farm:cropCode" codeSpaceAttribute="codeSpace"/>
+      </column>
+      <column name="producer_type" type="VARCHAR(50)">
+        <import xpath="farm:producerType/text()"/>
+        <export xpath="farm:producerType"/>
+      </column>
+      <geometry lod="0" property="farm:lod0Geometry"/>
+      <feature property="farm:producesLot"/>
+    </table>
+  </feature>
+
+  <feature name="HarvestedLot" classId="10022" extends="AbstractFeatureWithLifespanType">
+    <table name="farm_harvested_lot">
+      <column name="quantity_harvested" type="DOUBLE PRECISION">
+        <import xpath="farm:quantityHarvested/text()"/>
+        <export xpath="farm:quantityHarvested"/>
+      </column>
+      <column name="quantity_harvested_uom" type="VARCHAR(20)">
+        <import xpath="farm:quantityHarvested/@uom"/>
+        <export xpath="farm:quantityHarvested" uomAttribute="uom"/>
+      </column>
+      <column name="harvest_date" type="DATE">
+        <import xpath="farm:harvestDate/text()"/>
+        <export xpath="farm:harvestDate"/>
+      </column>
+    </table>
+  </feature>
+
+  <feature name="AgriculturalOperation" classId="10030" extends="AbstractDynamizer">
+    <table name="farm_operation">
+      <column name="operation_type" type="VARCHAR(100)">
+        <import xpath="farm:operationType/text()"/>
+        <export xpath="farm:operationType"/>
+      </column>
+      <column name="operation_type_codespace" type="VARCHAR(1000)">
+        <import xpath="farm:operationType/@codeSpace"/>
+        <export xpath="farm:operationType" codeSpaceAttribute="codeSpace"/>
+      </column>
+      <column name="area_affected" type="DOUBLE PRECISION">
+        <import xpath="farm:areaAffected/text()"/>
+        <export xpath="farm:areaAffected"/>
+      </column>
+      <column name="area_affected_uom" type="VARCHAR(20)">
+        <import xpath="farm:areaAffected/@uom"/>
+        <export xpath="farm:areaAffected" uomAttribute="uom"/>
+      </column>
+
+      <property name="inputUsed" classId="10031">
+        <table name="farm_input_used">
+          <column name="input_type" type="VARCHAR(100)">
+            <import xpath="farm:inputType/text()"/>
+            <export xpath="farm:inputType"/>
+          </column>
+        </table>
+      </property>
+
+    </table>
+  </feature>
+
+  <property name="soilAnalysis" classId="10060" extends="_GenericApplicationProperty">
+    <table name="farm_zarc_analise_solo">
+      <column name="ph" type="DOUBLE PRECISION">
+        <import xpath="farm:ph/text()"/>
+        <export xpath="farm:ph"/>
+      </column>
+      <column name="organic_matter" type="DOUBLE PRECISION">
+        <import xpath="farm:organicMatter/text()"/>
+        <export xpath="farm:organicMatter"/>
+      </column>
+      <column name="soil_texture" type="VARCHAR(100)">
+        <import xpath="farm:soilTexture/text()"/>
+        <export xpath="farm:soilTexture"/>
+      </column>
+    </table>
+  </property>
+
+  <property name="satelliteMonitoring" classId="10061" extends="_GenericApplicationProperty">
+    <table name="farm_zarc_monitoramento_satelite">
+      <column name="sensor_name" type="VARCHAR(255)">
+        <import xpath="farm:sensorName/text()"/>
+        <export xpath="farm:sensorName"/>
+      </column>
+      <column name="acquisition_date" type="DATE">
+        <import xpath="farm:acquisitionDate/text()"/>
+        <export xpath="farm:acquisitionDate"/>
+      </column>
+      <column name="ndvi_mean" type="DOUBLE PRECISION">
+        <import xpath="farm:ndviMean/text()"/>
+        <export xpath="farm:ndviMean"/>
+      </column>
+    </table>
+  </property>
+
+  <property name="cultivationHistory" classId="10062" extends="_GenericApplicationProperty">
+    <table name="farm_zarc_historico_cultivo">
+      <column name="crop_name" type="VARCHAR(255)">
+        <import xpath="farm:cropName/text()"/>
+        <export xpath="farm:cropName"/>
+      </column>
+      <column name="season" type="VARCHAR(50)">
+        <import xpath="farm:season/text()"/>
+        <export xpath="farm:season"/>
+      </column>
+      <column name="production_value" type="DOUBLE PRECISION">
+        <import xpath="farm:productionValue/text()"/>
+        <export xpath="farm:productionValue"/>
+      </column>
+    </table>
+  </property>
+
+  <property name="sustainability" classId="10070" extends="_GenericApplicationProperty">
+    <table name="farm_sustainability_metrics">
+      <column name="carbon_footprint" type="DOUBLE PRECISION">
+        <import xpath="farm:carbonFootprint/text()"/>
+        <export xpath="farm:carbonFootprint"/>
+      </column>
+      <column name="water_use_efficiency" type="DOUBLE PRECISION">
+        <import xpath="farm:waterUseEfficiency/text()"/>
+        <export xpath="farm:waterUseEfficiency"/>
+      </column>
+      <column name="energy_balance" type="DOUBLE PRECISION">
+        <import xpath="farm:energyBalance/text()"/>
+        <export xpath="farm:energyBalance"/>
+      </column>
+    </table>
+  </property>
+
+  <property name="traceabilityInfo" classId="10042" extends="_GenericApplicationProperty">
+    <table name="farm_traceability_info">
+      <column name="lot_id" type="VARCHAR(255)">
+        <import xpath="farm:lotID/text()"/>
+        <export xpath="farm:lotID"/>
+      </column>
+      <column name="blockchain_hash" type="VARCHAR(255)">
+        <import xpath="farm:blockchainHash/text()"/>
+        <export xpath="farm:blockchainHash"/>
+      </column>
+      <column name="harvest_date" type="DATE">
+        <import xpath="farm:harvestDate/text()"/>
+        <export xpath="farm:harvestDate"/>
+      </column>
+    </table>
+  </property>
+
+  <feature name="CropAreaTimeSlice" classId="10050" extends="AbstractVersion">
+    <table name="farm_croparea_timeslice"/>
+    </feature>
+
+</adeTransformation>
