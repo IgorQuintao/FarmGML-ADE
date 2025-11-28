@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<adeTransformation schemaVersion="5.0" xmlns="http://www.3dcitydb.org/ade/transformation/5.0">
+<adeTransformation schemaVersion="4.0"
+    xmlns="http://www.3dcitydb.org/ade/transformation/4.0">
+
 
   <feature name="RuralProperty" classId="10001" extends="LandUse">
     <table name="farm_rural_property">
@@ -8,17 +10,14 @@
         <import xpath="gml:name/text()"/>
         <export xpath="gml:name"/>
       </column>
-
       <column name="holder_id" type="VARCHAR(255)">
         <import xpath="farm:holderID/text()"/>
         <export xpath="farm:holderID"/>
       </column>
-
       <column name="car_code" type="VARCHAR(255)">
         <import xpath="farm:carCode/text()"/>
         <export xpath="farm:carCode"/>
       </column>
-
       <column name="ibge_code" type="VARCHAR(10)">
         <import xpath="farm:ibgeCode/text()"/>
         <export xpath="farm:ibgeCode"/>
@@ -61,10 +60,17 @@
         <import xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput/@uom"/>
         <export xpath="farm:farmSize/farm:economicSize/farm:totalAgriculturalOutput" uomAttribute="uom"/>
       </column>
+      <column name="production_value_crops" type="DOUBLE PRECISION">
+        <import xpath="farm:farmSize/farm:economicSize/farm:productionValueCrops/text()"/>
+        <export xpath="farm:farmSize/farm:economicSize/farm:productionValueCrops"/>
+      </column>
+      <column name="production_value_livestock" type="DOUBLE PRECISION">
+        <import xpath="farm:farmSize/farm:economicSize/farm:productionValueLivestock/text()"/>
+        <export xpath="farm:farmSize/farm:economicSize/farm:productionValueLivestock"/>
+      </column>
 
       <feature property="farm:enterprise"/>
       <feature property="farm:operation"/>
-
     </table>
   </feature>
 
@@ -116,6 +122,16 @@
         <export xpath="farm:feedingPractice"/>
       </column>
     </table>
+  </feature>
+  
+  <feature name="AquacultureEnterprise" classId="10011" extends="AbstractFeatureWithLifespanType">
+    <table name="farm_aquaculture_enterprise">
+      </table>
+  </feature>
+
+  <feature name="ForestryEnterprise" classId="10012" extends="AbstractFeatureWithLifespanType">
+    <table name="farm_forestry_enterprise">
+      </table>
   </feature>
 
   <feature name="AnnualCropArea" classId="10020" extends="PlantCover">
@@ -206,9 +222,8 @@
             <import xpath="farm:inputType/text()"/>
             <export xpath="farm:inputType"/>
           </column>
-        </table>
+          </table>
       </property>
-
     </table>
   </feature>
 
@@ -298,7 +313,8 @@
   </property>
 
   <feature name="CropAreaTimeSlice" classId="10050" extends="AbstractVersion">
-    <table name="farm_croparea_timeslice"/>
-    </feature>
-
-</adeTransformation>
+    <table name="farm_croparea_timeslice">
+      </table>
+  </feature>
+  
+  </adeTransformation>

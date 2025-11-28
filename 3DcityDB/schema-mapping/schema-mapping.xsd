@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.3dcitydb.org/ade/transformation/4.0"
+    xmlns="http://www.3dcitydb.org/ade/transformation/4.0"
+    elementFormDefault="qualified">
+
+    <!-- Root element -->
+    <xs:element name="adeTransformation" type="TransformationType"/>
+
+    <!-- adeTransformation complex type -->
+    <xs:complexType name="TransformationType">
+        <xs:sequence>
+            <xs:element name="feature" type="FeatureType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="property" type="PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hook" type="HookType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="schemaVersion" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- feature -->
+    <xs:complexType name="FeatureType">
+        <xs:sequence>
+            <xs:element name="table" type="TableType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="classId" type="xs:int" use="required"/>
+        <xs:attribute name="extends" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <!-- table -->
+    <xs:complexType name="TableType">
+        <xs:sequence>
+            <xs:element name="column" type="ColumnType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="geometry" type="GeometryType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="feature" type="FeaturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="property" type="PropertyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- column -->
+    <xs:complexType name="ColumnType">
+        <xs:sequence>
+            <xs:element name="import" type="ImportType"/>
+            <xs:element name="export" type="ExportType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- import -->
+    <xs:complexType name="ImportType">
+        <xs:attribute name="xpath" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- export -->
+    <xs:complexType name="ExportType">
+        <xs:attribute name="xpath" type="xs:string" use="required"/>
+        <xs:attribute name="uomAttribute" type="xs:string" use="optional"/>
+        <xs:attribute name="codeSpaceAttribute" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <!-- geometry -->
+    <xs:complexType name="GeometryType">
+        <xs:attribute name="lod" type="xs:int" use="required"/>
+        <xs:attribute name="property" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- feature property -->
+    <xs:complexType name="FeaturePropertyType">
+        <xs:attribute name="property" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- property -->
+    <xs:complexType name="PropertyType">
+        <xs:sequence>
+            <xs:element name="table" type="TableType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="classId" type="xs:int" use="required"/>
+        <xs:attribute name="extends" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- hook -->
+    <xs:complexType name="HookType">
+        <xs:sequence>
+            <xs:element name="table" type="TableType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="classId" type="xs:int" use="required"/>
+        <xs:attribute name="hook" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- property inside feature.table -->
+    <xs:complexType name="PropertyPropertyType">
+        <xs:sequence>
+            <xs:element name="table" type="TableType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="classId" type="xs:int" use="required"/>
+    </xs:complexType>
+
+</xs:schema>
