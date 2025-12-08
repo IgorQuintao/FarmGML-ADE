@@ -7,7 +7,7 @@
 ------------------------------------------------------------
 -- 1. Registrar a ADE no catálogo do 3DCityDB
 ------------------------------------------------------------
-INSERT INTO citydb_ade (id, ade_id, version, description)
+INSERT INTO citydb.ade (id, ade_id, version, description)
 VALUES (10001, 'FarmGML_ADE', '1.3', 'Farm Management ADE for agricultural/rural properties')
 ON CONFLICT DO NOTHING;
 

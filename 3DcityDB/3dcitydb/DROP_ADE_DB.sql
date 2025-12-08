@@ -26,4 +26,4 @@ DROP SEQUENCE IF EXISTS farm_annual_crop_area_seq;
 DROP SEQUENCE IF EXISTS farm_livestock_enterprise_seq;
 DROP SEQUENCE IF EXISTS farm_rural_property_seq;
 
-DELETE FROM citydb_ade WHERE ade_id = 'FarmGML_ADE';
+DELETE FROM citydb.ade WHERE adeid = 'FarmGML_ADE';
